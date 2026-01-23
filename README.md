@@ -5,6 +5,14 @@ Portage non-officiel de l'extension Chrome "Pleasant Password Server Auto-Filler
 ## Description
 
 Cette extension permet le remplissage automatique des identifiants depuis un serveur Pleasant Password Server dans Firefox.
+C'est un portage **direct** de l'extension Chrome d'origine : le code a été adapté pour Firefox avec un minimum de modifications,
+en conservant la structure et le comportement de la version Chrome.
+
+## Portage
+
+Le portage a été effectué à partir du code Chrome, en s'appuyant sur la compatibilité WebExtension :
+ajustements ciblés du `manifest.json`, adaptation des appels API (`browser.*`/`chrome.*`), et correctifs spécifiques
+au flux OAuth sous Firefox.
 
 ## Installation (Développement)
 
@@ -54,6 +62,15 @@ Pour une installation permanente sans signature Mozilla :
 - `storage.local` au lieu de `storage.session`
 - Utilisation de l'API `browser.*` avec fallback vers `chrome.*`
 - `browserAPI` exposé via `window` pour l'override `identity` dans le popup
+
+## Détails techniques (pour les curieux)
+
+- Architecture en services côté background (`ServiceManager`) : login, API, mots de passe, settings, messagerie
+- Cache des identifiants en `IndexedDB` (chargement initial + recherche locale rapide)
+- Flux OAuth2 adapté Firefox (override `identity` + fallback ouverture d'onglet)
+- Polyfill `browser-polyfill.js` + wrapper `browserAPI` pour unifier `browser`/`chrome`
+- Scripts de contenu injectés pour détection des champs et auto-remplissage
+- `crypto.js` embarque SJCL (lib crypto utilisée par l'extension d'origine)
 
 ## Permissions requises
 
