@@ -1,0 +1,85 @@
+<div class="ppass-divider-light-wide"></div>
+<div class="ppass-spacer-1"></div>
+<div data-innerHTML="error" class="edit-error-message"></div>
+<div class="ppass-save-prompt-form-group">
+    <div class="input-group">
+        <input data-value="url" class="ppass-save-prompt-input url-input" name="url" type="" placeholder="__MSG_url__" oninput="this.title = this.value">
+        <span id="save-propt-options-external-link-open" class="glyphicon-external-link external-link-icon input-group-addon" title="__MSG_openInNewTab__"></span>
+    </div>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_url__</label>
+</div>
+<div class="ppass-save-prompt-form-group">
+    <input data-value="title" class="ppass-save-prompt-input" name="title" type="" placeholder="__MSG_title__">
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_title__</label>
+</div>
+<div class="ppass-save-prompt-form-group" name="folder">
+    <select data-options="folders" class="ppass-save-prompt-select-list" id="folder-select"></select>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_folder__</label>
+</div>
+<div class="ppass-save-prompt-form-group ppass-username">
+    <div class="input-group">
+        <input id="username" data-value="username" class="ppass-save-prompt-input username-input" name="username" type=""
+            placeholder="__MSG_username__" oninput="this.title = this.value">
+        <span id="copyUsername" class="icon-copy copy-button"></span>
+    </div>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_username__</label>
+</div>
+<div class="ppass-save-prompt-form-group ppass-password">
+    <div class="input-group">
+        <input id="password" data-value="password" class="ppass-save-prompt-password-input password-input" name="password"
+            type="password" placeholder="__MSG_password__">
+        <span id="password-visibility-toggle" class="glyphicon-eye-open password-visibility input-group-addon"></span>
+        <span id="copyPassword" class="icon-copy copy-button"></span>
+    </div>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_password__</label>
+</div>
+<div class="ppass-save-prompt-form-group" id="totpCodeBlock" style="display: none;">
+    <div class="ppass-save-prompt-input">
+        <div class="row">
+            <span id="totpCode" style="padding-left: 17px;width: 84%;"></span>
+            <div class="countdown-timer" style="margin-top: -7px;">
+                <svg class="countdown-timer__svg" viewBox="0 0 100 100">
+                    <g class="countdown-timer__circle">
+                        <circle class="countdown-timer__path-elapsed" cx="50" cy="50" r="45" />
+                        <path id="countdown-timer-path-remaining" stroke-dasharray="283"
+                            class="countdown-timer__path-remaining" style="color:dodgerblue;" d="
+                                M 50, 50
+                                m -45, 0
+                                a 45,45 0 1,0 90,0
+                                a 45,45 0 1,0 -90,0
+                            "></path>
+                    </g>
+                </svg>
+                <span id="totpCounter" class="countdown-timer__label"></span>
+            </div>
+            <span id="copyTotpCode" class="icon-copy copy-button-totp-code"></span>
+        </div>
+    </div>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_totpCode__</label>
+</div>
+<div class="ppass-save-prompt-form-group ppass-password">
+    <div class="input-group">
+        <input id="totpSecret" data-value="totpSecret" class="ppass-save-prompt-password-input" name="totpSecret"
+            type="password" placeholder="__MSG_totpSecret__">
+        <span id="totpSecret-visibility-toggle"
+            class="glyphicon-eye-open totpSecret-visibility input-group-addon"></span>
+    </div>
+    <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_totpSecret__</label>
+</div>
+<input id="totpIssuer" data-value="totpIssuer" name="totpIssuer" type="hidden">
+<input id="totpDigits" data-value="totpDigits" name="totpDigits" type="hidden">
+<input id="totpPeriod" data-value="totpPeriod" name="totpPeriod" type="hidden">
+<div class="ppass-save-prompt-form-group">
+    <textarea data-value="notes" class="ppass-save-prompt-notes ppass-grey" name="notes" value=""
+        placeholder="__MSG_notes__"></textarea>
+    <label
+        class="ppass-save-prompt-label ppass-save-prompt-notes-label ppass-sub-text-1 ppass-grey">__MSG_notes__</label>
+</div>
+<div class="ppass-save-prompt-toggle-container" style="display: none;">
+    <label class="ppass-save-prompt-toggle-label">__MSG_saveAsNew__</label>
+    <label class="ppass-toggle">
+        <input name="create-check" class="" type="checkbox">
+        <span class="ppass-slider"></span>
+    </label>
+</div>
+<div name="save-id" data-template-bind='[{"attribute": "save-id", "value": "saveId"}]'></div>

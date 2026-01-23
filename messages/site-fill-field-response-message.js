@@ -1,0 +1,1 @@
+class SiteFillFieldResponseMessage{static type="SiteFillFieldResponseMessage";type=SiteFillFieldResponseMessage.type;success;failed;constructor(e,s){this.success=e,this.failed=s}}

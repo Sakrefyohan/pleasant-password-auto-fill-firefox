@@ -1,0 +1,1 @@
+class ScaleFactorMessage{static type="ScaleFactorMessage";type=ScaleFactorMessage.type;scaleFactor;promptType;constructor(e,t){this.scaleFactor=e,this.promptType=t}}

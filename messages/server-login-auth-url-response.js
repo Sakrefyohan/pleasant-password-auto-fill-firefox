@@ -1,0 +1,1 @@
+class ServerLoginAuthUrlResponse{static type="ServerLoginAuthUrlResponse";type=ServerLoginAuthUrlResponse.type;success;authUrl;verifier;constructor(e,s,r){this.success=e,this.authUrl=s,this.verifier=r}}

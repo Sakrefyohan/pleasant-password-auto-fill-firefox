@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="ppass-drop-shadow" style="overflow: hidden;">
+
+<head>
+    <link rel="stylesheet" href="../bootstrap-4.5.2-dist/css/bootstrap.min.css" />
+    <script src="translate.js" type="text/javascript"></script>
+    <script src="../jquery.js"></script>
+    <script src="../bootstrap-4.5.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/../crypto.js"></script>
+    <script src="../data/field-data.js"></script>
+    <script src="/data/ppass/folder-data.js"></script>
+    <script src="/data/ppass/password-entry.js"></script>
+    <script src="/data/ppass/totp-settings.js"></script>
+    <script src="../messages/site-fields-message.js"></script>
+    <script src="../messages/login-message.js"></script>
+    <script src="../messages/login-response-message.js"></script>
+    <script src="../messages/site-fill-field-message.js"></script>
+    <script src="../messages/get-settings-request.js"></script>
+    <script src="../messages/logout-request.js"></script>
+    <script src="../messages/logout-response.js"></script>
+    <script src="../messages/server-login-auth-url-request.js"></script>
+    <script src="../messages/server-login-token-request.js"></script>
+    <script src="../messages/login-status-request.js"></script>
+    <script src="../messages/login-status-response.js"></script>
+    <script src="../messages/default-login-request.js"></script>
+    <script src="../messages/update-settings-request.js"></script>
+    <script src="../messages/credential-password-request.js"></script>
+    <script src="../messages/credential-password-response.js"></script>
+    <script src="../messages/credential-fill-request.js"></script>
+    <script src="../messages/cached-folders-request-message.js"></script>
+    <script src="../messages/folders-update-request-message.js"></script>
+    <script src="../messages/ppass-entry-request-message.js"></script>
+    <script src="../messages/ppass-entry-response-message.js"></script>
+    <script src="../messages/save-password-entry-message.js"></script>
+    <script src="../messages/save-password-entry-response-message.js"></script>
+    <script src="../messages/credentials-request-message.js"></script>
+    <script src="../messages/credential-search-request-message.js"></script>
+    <script src="../messages/credentials-response-message.js"></script>
+    <script src="../messages/site-blacklist-message.js"></script>
+    <script src="../messages/blacklist-site-message.js"></script>
+    <script src="../messages/get-admin-settings-message.js"></script>
+    <script src="../messages/get-admin-settings-response-message.js"></script>
+    <script src="../messages/credential-totp-settings-request-message.js"></script>
+    <script src="../messages/credential-totp-settings-response-message.js"></script>
+    <script src="../errors/invalid-session-error.js"></script>
+    <!--TOTP Code-->
+    <script src="sha.js"></script>
+    <script src="totp.js"></script>
+
+    <script src="/content-scripts/edit-form.js"></script>
+    <script src="message-wrapper.js"></script>
+    <script src="firefox-auth-override.js"></script>
+    <script src="popup.js"></script>
+    <link href="../styles/ppass-styles.css" rel="stylesheet" type="text/css" />
+    <link href="plugin.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700"
+        rel="stylesheet" />
+</head>
+
+<body
+    style="min-width:480px !important;min-height:557px !important; max-width:480px !important; max-height: 557px !important; width:480px !important; height: 557px !important; overflow: hidden;">
+
+
+
+    <!-- Initial Loading View -->
+    <div id="loading-overlay" class="loading-overlay" style="display:none;">
+        <div class="loading-overlay-spinner-container">
+            <img src="../images/sync_grey_rev.png" class="loading-overlay-spinner overlay-rotating" alt="Loading">
+            <div class="loading-text" data-i18n="initializing">__MSG_pluginInitializing</div>
+        </div>
+    </div>
+
+    <div class="ppass-save-prompt-title">
+        <div style="padding: 5px;">
+            <img class="main-menu-logo ppass-save-prompt-logo" src="/images/ppass-transparent-icon-48.png">
+        </div>
+        <div id="promptTitle" class="ppass-save-prompt-title-text">__MSG_promptTitle__</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; height:512px">
+
+        <div id="ppass-settings" style="display: none; flex-grow: 1;">
+
+        </div>
+
+        <div id="ppass-edit" style="display: none;  overflow-y:scroll">
+
+
+        </div>
+
+        <div id="error-container" class="ppass-error-container" style="display: none;">
+            <div id="error-message" class="ppass-error-message"></div>
+            <button id="retry-button" class="ppass-button btn btn-danger" type="button"
+                style="background-color: var(--venice-blue); border-color: var(--cerulean-blue); ">Retry</button>
+        </div>
+
+        <div id="ppass-main" style="display: none;">
+            <div class="integrated-search-container" style="margin: 5px 10px;">
+                <div class="search-wrapper">
+                    <img class="search-icon" src="/images/Icons_Search.svg" alt="Search" />
+                    <input type="text" id="search-text-field" autocomplete="off" class="integrated-search-input"
+                        placeholder="__MSG_search__" />
+                </div>
+            </div>
+
+            <div class="credential-count-container">
+                <span id="credential-count-label" style="color: #666; font-size: 12px;">Count: </span>
+                <span id="credential-count" style="color: #666; font-size: 13px;">0</span>
+            </div>
+
+
+            <div class="alert-danger" role="alert" id="main-menu-errors" style="display:none;">
+                <p id="logout-error"></p>
+            </div>
+
+            <div style="flex-grow:1" id="main-menu-content">
+                <div id="credential-list" class="ppass-credential-list-group" style="height: 1px;"></div>
+            </div>
+
+            <div>
+                <div id="never-save-settings">
+                    <div id="credential-list-end-divider" class="ppass-divider-light-wide"></div>
+                    <div class="ppass-save-prompt-toggle-container"
+                        style="display:flex; flex-direction: row; align-items: center; justify-content: flex-start;">
+                        <label class="toggle-label ppass-save-prompt-toggle-label"
+                            style="flex-grow: 1;">__MSG_promptForSite__</label>
+                        <label class="ppass-toggle">
+                            <input id="never-save-setting" class="" type="checkbox">
+                            <span class="ppass-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="main-menu-buttons-container" class="bottom-nav-bar-hidden">
+            <div class="bottom-nav-item">
+                <a href="#" id="refreshButton" class="bottom-nav-link" title="__MSG_refresh__">
+                    <div class="bottom-nav-icon">
+                        <img class="white-grey" src="../images/Icons_Reload.svg" alt="Refresh" />
+                    </div>
+                    <div class="bottom-nav-text">__MSG_refresh__</div>
+                </a>
+            </div>
+            <div class="bottom-nav-item">
+                <a href="#" id="settingsButton" class="bottom-nav-link" title="__MSG_settings__">
+                    <div class="bottom-nav-icon">
+                        <img class="white-grey" src="../images/Icons_Settings.svg" alt="Settings" />
+                    </div>
+                    <div class="bottom-nav-text">__MSG_settings__</div>
+                </a>
+            </div>
+            <div class="bottom-nav-item">
+                <a id="openMyVaultLink" href="#" target="_blank" class="bottom-nav-link" title="__MSG_openVault__">
+                    <div class="bottom-nav-icon">
+                        <img class="white-grey" src="../images/vault2.png" alt="Vault" />
+                    </div>
+                    <div class="bottom-nav-text">My Vault</div>
+                </a>
+            </div>
+            <div class="bottom-nav-item">
+                <a href="#" id="logoutButton" class="bottom-nav-link" title="__MSG_signOut__">
+                    <div class="bottom-nav-icon">
+                        <img class="white-grey" style="transform: scaleX(-1);" src="../images/sign-out2.png"
+                            alt="Sign Out" />
+                    </div>
+                    <div class="bottom-nav-text">__MSG_signOut__</div>
+                </a>
+            </div>
+        </div>
+
+        <div id="ppass-server-select" class="ppass-login-form" style="display: none; vertical-align: middle;">
+            <div class="ppass-logo-banner">
+                <img class="white-veniceblue" src="../images/PPASS_DualLogo_OpII.png" />
+            </div>
+            <div class="alert alert-danger" role="alert" id="server-select-errors" style="display:none;">
+            </div>
+            <br />
+            <h7 style="text-align: center;margin-bottom:3px"><span
+                    style="font-weight: 400;">__MSG_enterServerUrl__</span></h7>
+            <div style="width: 90%; text-align: center; margin: 0 auto;">
+                <input type="text" id="server-name-field" class="ppass-server-url-input" value=""
+                    placeholder="https://serveraddress:10001"
+                    style="width: 100%;border-radius: 8px;background-color: var(--anti-flash-white);color: var(--bright-blue);border:none;text-align: center;" />
+                <br />
+            </div>
+            <br />
+            <div style="text-align: center;margin-top:3px;">
+                <button id="confirm-server"
+                    style="background-color: var(--venice-blue); border-color: var(--cerulean-blue); width:50%; font-weight: 500;padding-top:10px;padding-bottom:10px;"
+                    class="btn btn-danger col-8" type="button">__MSG_connect__</button>
+                <div style="margin-top:2px;"><span style="font-size:smaller;"><a id="openHelpPage" href="#">
+                            __MSG_helpToConnect__</a> </span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+class GetAdminSettingsMessage{static type="GetAdminSettingsMessage";type=GetAdminSettingsMessage.type}

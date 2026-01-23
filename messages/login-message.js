@@ -1,0 +1,1 @@
+class LoginMessage{static type="LoginMessage";type=LoginMessage.type;url;username;password;constructor(s,e,t){this.url=s,this.username=e,this.password=t}}

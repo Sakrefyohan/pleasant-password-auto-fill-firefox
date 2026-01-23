@@ -1,0 +1,1 @@
+class LoginCapturedResponseMessage{static type="LoginCapturedResponseMessage";type=LoginCapturedResponseMessage.type;constructor(s,e,t){this.url=s,this.username=e,this.password=t}}

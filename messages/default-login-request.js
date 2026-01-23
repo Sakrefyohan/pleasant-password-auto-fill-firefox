@@ -1,0 +1,1 @@
+class DefaultLoginRequest{static type="DefaultLoginRequest";type=DefaultLoginRequest.type;constructor(){}}

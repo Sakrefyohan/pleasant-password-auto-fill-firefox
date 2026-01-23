@@ -1,0 +1,1 @@
+class CredentialsRequestMessage{static type="CredentialRequestMessage";type=CredentialsRequestMessage.type;url;refresh;constructor(e,s){this.url=e,this.refresh=s}}

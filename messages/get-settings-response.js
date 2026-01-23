@@ -1,0 +1,1 @@
+class GetSettingsResponse{static type="GetSettingsResponse";type=GetSettingsResponse.type;settingMappings;constructor(t){this.settingMappings=t}}

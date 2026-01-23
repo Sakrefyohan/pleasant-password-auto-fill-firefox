@@ -1,0 +1,1303 @@
+/*@font-face {
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('chrome-extension://__MSG_@@extension_id__/styles/fonts/Roboto-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('chrome-extension://__MSG_@@extension_id__/styles/fonts/Roboto-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('chrome-extension://__MSG_@@extension_id__/styles/fonts/Roboto-Medium.woff2') format('woff2');
+}*/
+
+:root {
+    --main-red: #cf3339;
+    --dark-red: #872327;
+    --light-red: #ffd0d2;
+    /*--dark-grey: #818589;*/
+    --dark-grey: #747678;
+    --darker-grey: #474747;
+    --medium-grey: rgb(175, 175, 175);
+    --light-grey: #dedede;
+    --bright-blue: #176ae6;
+    --dark-blue: #4545d7;
+    --cerulean-blue: #2455cf;
+    /*36,85,192*/
+    --venice-blue: #074983;
+    --bright-blue: #0d7acc;
+    /*7,73,131*/
+    --light-blue: rgb(102, 175, 233);
+    --anti-flash-white: rgba(242, 243, 253, 0.8);
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    border-radius: inherit;
+    /* Inherit border-radius from parent */
+    overflow: hidden;
+    /* Ensure content doesn't spill outside */
+    box-sizing: border-box;
+    /* Include padding in the width/height calculation */
+}
+
+.loading-overlay-spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* .loading-overlay-spinner {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+} */
+
+.loading-overlay-spinner-container>img {
+    width: 25px;
+    height: 25px;
+}
+
+.loading-text {
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+    margin-top: 8px;
+}
+
+.overlay-rotating {
+    animation: rotate 1.5s linear infinite;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scaleX(-1) scaleY(-1);
+    }
+
+    to {
+        transform: rotate(360deg) scaleX(-1) scaleY(-1);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.ppass-icon-16-red {
+    background: url('chrome-extension://__MSG_@@extension_id__/images/ppass-icon-16.png');
+    height: 16px;
+    width: 16px;
+    float: left;
+}
+
+.ppass-red {
+    color: var(--main-red);
+}
+
+.ppass-blue {
+    color: var(--venice-blue);
+}
+
+.ppass-grey {
+    color: var(--dark-grey);
+}
+
+.ppass-green {
+    color: #00ab0e;
+}
+
+/* Example: Main login button. */
+.ppass-large-button {
+    width: 300px;
+    height: 60px;
+    border-radius: 35px;
+    background-color: var(--bright-blue);
+}
+
+/* Example: Login button in the extension action menu. */
+.ppass-button-1 {
+    width: 326px;
+    height: 39px;
+    border-radius: 4px;
+    background-color: var(--venice-blue);
+}
+
+/* .password-visibility {
+    background: white;
+    margin-top: 15px;
+    margin-left: 5px;
+} */
+
+.has-success .input-group-addon {
+    color: inherit;
+    background-color: #dff0d8;
+    border-color: #3c763d;
+}
+
+/* .password-visibility:hover>span {
+    color: gray;
+} */
+
+/* Example: login fields */
+.large-text-input {
+    border: solid 1px var(--light-grey);
+    background-color: #ffffff;
+}
+
+.large-text-input.large-text-input-alt {
+    background-color: #eeeeee;
+}
+
+.ppass-input-menu-container {
+    width: 360px;
+    height: 251px;
+    background-color: #ffffff;
+}
+
+.ppass-context-menu-container {
+    width: 137px;
+    height: 141px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.ppass-action-menu-container {
+    width: 360px;
+    background-color: #ffffff;
+}
+
+.ppass-divider-light-wide {
+    width: auto;
+    height: 0.95px;
+    background-color: var(--light-grey);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.ppass-divider-light-wide.no-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.ppass-divider-light {
+    width: 288px;
+    height: 0.95px;
+    background-color: var(--light-grey)
+}
+
+.ppass-divider-light-narrow {
+    width: 93%;
+    height: 1px;
+    background-color: var(--light-grey);
+    float: left;
+
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.ppass-drop-shadow {
+    box-shadow: 0px 0px 17px 0px;
+}
+
+/* Example: Main login button text */
+.ppass-large-button-text {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Example: The url and username text in the user input menu. */
+.ppass-sub-text-1 {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+/* Example: The folder text in the user input menu. */
+.ppass-sub-text-1-small {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+/* Example: The text in the context menu */
+.ppass-sub-text-2 {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* Example: Enterprise SSO Login text on action menu. */
+.ppass-action-text-small {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--venice-blue);
+}
+
+/* Example: The Open My Vault and Logout text*/
+.ppass-action-text {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--dark-grey);
+    top: 3px;
+    font-size: 12pt;
+}
+
+a:hover {
+    text-decoration: unset !important;
+}
+
+/* Example: The more options button next to */
+/* .ppass-action-button {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border-style: none;
+    display: inline-block;
+    background-color: transparent;
+    color: var(--dark-grey);
+}
+
+.ppass-action-button:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+    box-shadow: -1px 3px 9px -4px black;
+}
+
+.ppass-action-button:focus {
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+} */
+.prompt-action-button.ppass-action-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2042%20184.98%22%20style%3D%22enable-background%3Anew%200%200%2042%20184.98%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%09.st0%7Bfill%3A%235f5f5f%3B%7D%0A%3C%2Fstyle%3E%0A%3Cg%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2221%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2292.49%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%22163.98%22%20r%3D%2221%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+    background-size: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -13px
+        /* padding: 0px;
+    margin-left: 3px; */
+}
+
+.prompt-action-button.ppass-action-button:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    /* Match modern hover effect */
+    cursor: pointer;
+    box-shadow: none;
+    /* Remove old shadow for cleaner look */
+}
+
+.prompt-action-button.ppass-action-button[aria-expanded="true"] {
+    background-color: rgba(0, 0, 0, 0.12);
+    /* Match focus style */
+    outline: none;
+}
+
+
+.ppass-input-label {
+    width: 57px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: var(--dark-grey);
+}
+
+.ppass-website-icon {
+    width: 30px;
+    height: 31px;
+}
+
+
+
+/* Toggle button */
+
+.ppass-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 18px;
+}
+
+.ppass-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ppass-slider {
+
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 7px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-grey);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.ppass-toggle.disabled {
+    opacity: 0.4;
+}
+
+.ppass-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0px;
+    bottom: -4px;
+    background-color: white;
+    -webkit-transition: transform .4s, background-color .4s;
+    transition: transform .4s, background-color .4s;
+    border-radius: 50%;
+    box-shadow: -1px 3px 10px -3px black;
+}
+
+input:checked+.ppass-slider {
+    background-color: var(--light-blue);
+}
+
+input:focus+.ppass-slider {}
+
+input:checked+.ppass-slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    background-color: var(--venice-blue);
+}
+
+/* End Togggle button */
+
+
+
+
+/* Save prompt */
+
+.ppass-save-prompt-container {
+    position: absolute;
+    width: 460px;
+}
+
+.ppass-save-prompt-title {
+    font-family: Roboto, sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-grey);
+    background-color: var(--venice-blue);
+    height: 45px;
+}
+
+.ppass-save-prompt-title-text {
+    position: relative;
+    top: 7px;
+    color: white;
+    line-height: 23px;
+    font-weight: 300;
+}
+
+.ppass-save-prompt {
+    padding: 22px;
+    background-color: white;
+}
+
+.ppass-save-prompt-response-container {
+
+    font-family: Roboto, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ppass-save-prompt-logo {
+    height: 35px;
+    position: absolute;
+    left: 25px;
+}
+
+.ppass-save-prompt-entry-info-grid {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas:
+        'title more'
+        'url more'
+        'username more'
+        'folder more';
+    grid-gap: 0px;
+    padding: 0px 0px 18px 0px;
+    position: relative;
+    left: 19px;
+}
+
+.ppass-save-prompt>.ppass-divider-light-wide {
+    margin-top: 0px;
+    margin: 0px -22px 22px -22px;
+}
+
+.ppass-save-prompt-options-container>.ppass-divider-light-wide {
+    margin-top: 0px;
+    margin: 0px -22px 18px -22px;
+}
+
+.glyphicon-eye-open {
+    content: url("../images/Icons_Reveal.svg");
+    height: 25px;
+    width: 25px;
+}
+
+
+.input-group {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/* Style for URL input to prevent collision with icon */
+.input-group input[data-value="url"] {
+    flex: 1;
+    min-width: 0;
+    /* This is crucial to allow the input to shrink */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 35px;
+    /* Add padding to ensure text doesn't go under the icon */
+}
+
+/* Style for the external link icon */
+.glyphicon-external-link {
+    content: url("../images/Icons_ExternalLink.svg");
+    height: 25px;
+    width: 25px;
+    flex-shrink: 0;
+    /* Prevent the icon from shrinking */
+    position: absolute;
+    right: 5px;
+    /* Position from the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center vertically */
+    z-index: 2;
+    /* Ensure icon stays above input text */
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.glyphicon-external-link:hover {
+    opacity: 0.7;
+}
+
+/* Make the input-group-addon non-collapsible */
+.input-group-addon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* .glyphicon-external-link {
+    content: url("../images/Icons_ExternalLink.svg");
+    height: 25px;
+    width: 25px;
+} */
+
+/*.entry-icon { grid-area: icon; margin-top: 10px; width: 32px; height: 32px;}*/
+.entry-title {
+    grid-area: title;
+    font-size: 13pt;
+}
+
+.entry-more {
+    grid-area: more;
+}
+
+.entry-url {
+    grid-area: url;
+}
+
+.entry-username {
+    grid-area: username;
+    font-size: 11pt;
+}
+
+.entry-folder {
+    grid-area: folder;
+    color: var(--medium-grey);
+    font-style: italic;
+    padding-top: 4px;
+}
+
+.ppass-save-prompt-options-container {
+    display: grid;
+}
+
+.ppass-save-prompt-button-container {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.ppass-save-prompt-button-container>button {}
+
+
+.ppass-save-prompt-never-link {
+    background: none;
+    outline: none;
+    border-style: none;
+    color: var(--dark-blue);
+    height: 46px;
+    width: 100px;
+    font-size: 10pt !important;
+    font-family: Roboto, sans-serif;
+    float: right;
+    margin-right: 18px;
+}
+
+.ppass-save-prompt-never-link:hover {
+    cursor: pointer;
+}
+
+.ppass-prompt-button {
+    height: 46px;
+    width: 106px;
+    border-radius: 4px;
+    font-size: 12pt;
+    padding: 0px;
+    font-weight: 400;
+}
+
+.ppass-save-prompt-save-button {
+    border-style: none;
+    background-color: var(--venice-blue);
+    font-family: Roboto, sans-serif;
+    color: white;
+    float: left;
+    box-shadow: -1px 3px 9px -4px black;
+}
+
+.ppass-save-prompt-save-button:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.ppass-save-prompt-save-button:focus {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+.ppass-save-prompt-cancel-button {
+
+    border-style: none;
+    font-family: Roboto, sans-serif;
+    background-color: transparent;
+    color: var(--dark-grey);
+}
+
+.ppass-save-prompt-cancel-button:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+    box-shadow: -1px 3px 9px -4px black;
+}
+
+.ppass-save-prompt-cancel-button:focus {
+    border-style: none;
+    outline: none;
+    background-color: var(--light-grey);
+}
+
+.ppass-save-prompt-more-button {
+    position: absolute;
+    font-size: 25pt;
+    right: 67px;
+    background: url("../images/edit.png") no-repeat;
+    background-size: 29px;
+    background-position: 6px;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+.ppass-save-prompt-form-group {
+    margin: -10px 0px 10px 0px;
+}
+
+.ppass-save-prompt-select-list {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    color: black;
+    font-size: 13pt;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    border-radius: 4px;
+    padding: 17px;
+    border-color: var(--medium-grey);
+
+    background: url("../images/down_arrow.png") no-repeat;
+    background-position: right 7px center;
+    /* Change the px value here to change the distance */
+    background-size: 40px;
+    appearance: none;
+}
+
+.ppass-save-prompt-select-list>option {
+    font-weight: 300;
+}
+
+.ppass-save-prompt-select-list:focus {
+    border-color: var(--light-blue);
+    border-width: 1px;
+    box-shadow: -1px 3px 10px -3px var(--light-blue);
+}
+
+.ppass-save-prompt-select-list:focus+.ppass-save-prompt-label {
+    color: var(--light-blue);
+}
+
+.ppass-save-prompt-input {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    color: black;
+    font-size: 13pt;
+    font-family: Roboto, sans-serif;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 17px;
+    border-color: var(--medium-grey);
+    font-weight: 300;
+}
+
+.ppass-save-prompt-input::placeholder {
+    color: var(--medium-grey);
+}
+
+.ppass-save-prompt-input:focus {
+    border-color: var(--light-blue);
+    border-width: 1px;
+    box-shadow: -1px 3px 10px -3px var(--light-blue);
+}
+
+.ppass-save-prompt-input:focus+.ppass-save-prompt-label {
+    color: var(--light-blue);
+}
+
+.ppass-save-prompt-password-input {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    color: black;
+    font-size: 13pt;
+    font-family: Roboto, sans-serif;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 17px;
+    border-color: var(--medium-grey);
+    font-weight: 300;
+}
+
+.ppass-save-prompt-passwordinput::placeholder {
+    color: var(--medium-grey);
+}
+
+.ppass-save-prompt-password-input:focus {
+    border-color: var(--light-blue);
+    border-width: 1px;
+    box-shadow: -1px 3px 10px -3px var(--light-blue);
+}
+
+.ppass-save-prompt-password-input:focus+.ppass-save-prompt-label {
+    color: var(--light-blue);
+}
+
+.ppass-server-url-input,
+.ppass-search-text-input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    color: black;
+    font-size: 12pt;
+    font-family: Roboto, sans-serif;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 17px;
+    border-color: var(--medium-grey);
+    font-weight: 300;
+}
+
+.ppass-server-url-input::placeholder,
+.ppass-search-text-input::placeholder {
+    color: var(--medium-grey);
+}
+
+.ppass-server-url-input:focus,
+.ppass-search-text-input:focus {
+    border-color: var(--light-blue);
+    border-width: 1px;
+    box-shadow: -1px 3px 10px -3px var(--light-blue);
+}
+
+.ppass-server-url-input:focus+.ppass-save-prompt-label {
+    color: var(--light-blue);
+}
+
+.ppass-save-prompt-label {
+    position: relative;
+    top: -64px;
+    left: 13px;
+    background: linear-gradient(0deg, #ffffff00 48%, #ffff 0%);
+    padding: 0px 9px 0px 5px;
+    font-weight: 500;
+}
+
+.ppass-save-prompt-notes {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    resize: none;
+    margin: 0px 10px -6px 0px;
+    font-family: Roboto, sans-serif;
+    border-radius: 4px;
+    padding: 17px;
+    border-color: var(--medium-grey);
+    font-size: 13pt;
+    font-weight: 300;
+    color: black;
+}
+
+.ppass-save-prompt-notes::placeholder {
+    color: var(--medium-grey);
+}
+
+.ppass-save-prompt-notes:focus {
+    border-color: var(--light-blue);
+    border-width: 1px;
+    box-shadow: -1px 3px 10px -3px var(--light-blue);
+}
+
+.ppass-save-prompt-notes:focus+.ppass-save-prompt-label {
+    color: var(--light-blue);
+}
+
+.ppass-save-prompt-toggle-container {
+    position: relative;
+    height: 15px;
+    margin-top: -4px;
+    margin-bottom: 22px;
+    padding: 0px 19px;
+}
+
+.ppass-save-prompt-toggle-container>.ppass-toggle {
+    float: right;
+    right: 29px;
+}
+
+.ppass-save-prompt-toggle-label {
+    /* position: absolute; */
+    font-family: Roboto, sans-serif;
+    color: var(--dark-grey);
+    font-size: 13pt;
+}
+
+.ppass-spacer-1 {
+    height: 18px;
+}
+
+.ppass-save-prompt-label.ppass-save-prompt-notes-label {
+    top: -152px;
+    position: relative;
+}
+
+
+
+/* End Save prompt */
+
+
+/* Beging Credential prompt */
+
+
+.ppass-credential-prompt {
+    padding: 22px 0px 22px 0px;
+    background-color: white;
+}
+
+.ppass-credential-prompt:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    border-bottom: 11px solid white;
+    border-bottom-color: white;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    z-index: 1000000002;
+}
+
+.ppass-credential-list-group {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* height: 0px; */
+    padding: 6px 0px 10px 13px;
+}
+
+
+.ppass-credential-entry-info-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 90% 10%;
+    grid-template-areas:
+        'title more'
+        'url more'
+        'username more'
+        'folder more';
+    grid-gap: 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+
+.ppass-credential-entry-info-grid:hover {
+    /*background-color: #f7f7f7;*/
+    cursor: pointer;
+}
+
+.ppass-credential-prompt-container {
+    margin: 20px;
+    position: relative;
+    z-index: 1000000001;
+}
+
+.ppass-credential-list-group>.ppass-divider-light-narrow {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    float: right;
+}
+
+.credentials-message {
+    font-family: Roboto, sans-serif;
+    font-size: 24pt;
+    color: var(--light-grey);
+    text-align: center;
+}
+
+.ppass-prompt-close {
+    height: 22px;
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+
+.ppass-prompt-close:hover {
+    cursor: pointer;
+}
+
+.prompt-action-button {
+    position: absolute;
+    font-size: 25pt;
+    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2042%20184.98%22%20style%3D%22enable-background%3Anew%200%200%2042%20184.98%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%09.st0%7Bfill%3A%23777777%3B%7D%0A%3C%2Fstyle%3E%0A%3Cg%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2221%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2292.49%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%22163.98%22%20r%3D%2221%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+    background-size: 6px;
+    background-position: center right calc(0.375em + 0.1875rem);
+    background-repeat: no-repeat;
+    top: -13px;
+}
+
+.ppass-credential-dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.ppass-credential-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 1;
+    right: 100px;
+}
+
+.ppass-credential-dropdown-content {}
+
+.dropdown-item:active {
+    background-color: var(--medium-grey);
+}
+
+/* End Credential prompt */
+
+#edit-menu-content>.edit-buttons-container>.ppass-save-prompt-button-container>.ppass-save-prompt-cancel-button {
+    margin-left: 15px;
+    float: left;
+}
+
+.edit-success-message {
+    font-family: Roboto, sans-serif;
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.ppass-save-prompt-success {
+    font-family: Roboto, sans-serif;
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.ppass-save-prompt-status {
+    font-family: Roboto, sans-serif;
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.loading-spinner {
+    animation: spin-animation 1s infinite;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 11px;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(-359deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.dropdown-menu>.dropdown-item {
+    padding-left: 15px;
+    color: var(--darker-grey);
+}
+
+.dropdown-menu {
+    left: -63px !important;
+}
+
+.dropdown-menu.scrolled {
+    left: -12px !important;
+}
+
+.dropdown-menu.scrolled.cred-menu {
+    left: -10px !important;
+}
+
+.dropdown-menu.cred-menu {
+    left: -64px !important;
+}
+
+.tooltip>.tooltip-inner {
+    background-color: var(--light-grey) !important;
+    color: black;
+}
+
+.tooltip>.arrow::before {
+    border-top-color: var(--light-grey) !important;
+}
+
+.ppass-dropdown-drop-shadow {
+    box-shadow: 0px 2px 10px -4px;
+}
+
+/* .ppass-username {
+    position: relative;
+}
+
+.ppass-username .input-group {
+    position: relative;
+}
+
+.ppass-password {
+    position: relative;
+}
+
+.ppass-password .input-group {
+    position: relative;
+}
+
+.ppass-password .input-group .password-visibility {
+    position: absolute;
+    right: 37px;
+    top: 3px;
+    cursor: pointer;
+    font-size: 5px;
+} */
+
+/* Common styles for input groups with icons */
+.input-group {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/* Style for inputs with icons to prevent collision */
+.url-input,
+.username-input,
+.password-input,
+.ppass-save-prompt-password-input {
+    flex: 1;
+    min-width: 0; /* Allow input to shrink */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.url-input,
+.username-input {
+    padding-right: 35px; /* Space for one icon */
+}
+
+/* Password input specific - two icons */
+.password-input,
+.ppass-save-prompt-password-input {
+    padding-right: 70px;
+    /* Space for two icons */
+}
+
+.icon-copy {
+    cursor: pointer;
+    content: url("../images/Icons_Copy.svg");
+    height: 25px;
+    width: 25px;
+}
+
+/* .copy-button-totp-code {
+    margin-top: -2px;
+    padding-left: 5px;
+    cursor: pointer;
+} */
+
+/* Password input specific - two icons */
+.password-input,
+.ppass-save-prompt-password-input {
+    padding-right: 70px;
+    /* Space for two icons */
+}
+
+/* Icon positioning */
+.input-group-addon,
+.password-visibility,
+.copy-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* External link icon and copy button positioning */
+.external-link-icon,
+.copy-button {
+    right: 5px;
+}
+
+/* Password visibility icon positioning */
+.password-visibility {
+    right: 40px; /* Position to the left of copy button */
+}
+
+/* For TOTP secret field which has only one icon */
+#totpSecret-visibility-toggle {
+    right: 5px;
+}
+
+/* Hover effects for all icons */
+.glyphicon-external-link:hover,
+.glyphicon-eye-open:hover,
+.icon-copy:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+
+
+/*Base time implementation found at https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ */
+.countdown-timer {
+    position: relative;
+    height: 30px;
+    width: 35px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.countdown-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.countdown-timer__path-elapsed {
+    stroke-width: 5px;
+    stroke: grey;
+}
+
+.countdown-timer__label {
+    position: absolute;
+
+    /* Size should match the parent container */
+    width: 30px;
+    height: 30px;
+
+    /* Keep the label aligned to the top */
+    top: 0;
+
+    padding-left: 3px;
+    padding-top: 6px;
+
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-size: 15px;
+}
+
+.countdown-timer__path-remaining {
+    /* Just as thick as the original ring */
+    stroke-width: 7px;
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+}
+
+.countdown-timer__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+}
+
+.black-white {
+    filter: invert(100%);
+}
+
+.white-grey {
+    filter: invert(60%);
+}
+
+.ppass-search-text-input,
+.btn-outline-secondary {
+    border-color: #DEDEDE;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #DEDEDE;
+}
+
+.white-veniceblue {
+    filter: invert(87%) sepia(77%) saturate(3304%) hue-rotate(196deg) brightness(103%) contrast(94%);
+}

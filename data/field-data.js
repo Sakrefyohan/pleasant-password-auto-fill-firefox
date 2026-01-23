@@ -1,0 +1,1 @@
+class FieldData{fieldId;fieldValue;constructor(l,d){this.fieldId=l,this.fieldValue=d}}

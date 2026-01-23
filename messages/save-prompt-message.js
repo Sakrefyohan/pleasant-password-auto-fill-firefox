@@ -1,0 +1,1 @@
+class SavePromptMessage{static type="SavePromptMessage";type=SavePromptMessage.type;savePromptData;constructor(t){this.savePromptData=t}}

@@ -1,0 +1,1 @@
+class CredentialFillRequest{static type="CredentialFillRequest";type=CredentialFillRequest.type;credentialIdents;constructor(e){this.credentialIdents=e}}

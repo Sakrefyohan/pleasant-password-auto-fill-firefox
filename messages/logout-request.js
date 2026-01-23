@@ -1,0 +1,1 @@
+class LogoutRequest{static type="LogoutRequest";type=LogoutRequest.type;constructor(){}}

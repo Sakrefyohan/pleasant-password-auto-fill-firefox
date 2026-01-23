@@ -1,0 +1,1 @@
+class CredentialsResponseMessage{static type="CredentialsResponseMessage";type=CredentialsResponseMessage.type;credentialIdentsArray;searchText;constructor(e,s){this.credentialIdentsArray=e,this.searchText=s}}

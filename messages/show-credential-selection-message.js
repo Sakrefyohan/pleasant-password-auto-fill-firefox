@@ -1,0 +1,1 @@
+class ShowCredentialSelectionMessage{static type="ShowCredentialSelectionMessage";type=ShowCredentialSelectionMessage.type;action;xOffset;yOffset;buttonCenterX;constructor(e,t,s,n=null){this.action=e,this.xOffset=t,this.yOffset=s,this.buttonCenterX=n}}

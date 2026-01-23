@@ -1,0 +1,1 @@
+class NeverSaveMessage{static type="NeverSaveMessage";type=NeverSaveMessage.type;savePromptData;constructor(e){this.savePromptData=e}}

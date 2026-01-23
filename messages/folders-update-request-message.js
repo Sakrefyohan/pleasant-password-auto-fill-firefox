@@ -1,0 +1,1 @@
+class FoldersUpdateRequestMessage{static type="FoldersUpdateRequestMessage";type=FoldersUpdateRequestMessage.type}

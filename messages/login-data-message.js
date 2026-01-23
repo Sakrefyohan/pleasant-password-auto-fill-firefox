@@ -1,0 +1,1 @@
+class LoginDataMessage{static type="LoginDataMessage";type=LoginDataMessage.type;loginData;constructor(a){this.loginData=a}}

@@ -1,0 +1,1 @@
+class ServerLoginTokenRequest{static type="ServerLoginTokenRequest";type=ServerLoginTokenRequest.type;server;returnedAuthUrl;verifier;constructor(e,r,t){this.server=e,this.returnedAuthUrl=r,this.verifier=t}}

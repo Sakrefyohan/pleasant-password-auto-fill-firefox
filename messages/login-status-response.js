@@ -1,0 +1,1 @@
+class LoginStatusResponse{static type="LoginStatusResponse";type=LoginStatusResponse.type;isLoggedIn;constructor(s){this.isLoggedIn=!0===s}}

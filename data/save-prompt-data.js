@@ -1,0 +1,1 @@
+class SavePromptData{id;update;confirm;newPasswordEntry;tabId;moreOptions=!1;constructor(t,s,a,i,r){this.id=t,this.newPasswordEntry=s,this.update=a,this.confirm=i,this.tabId=r}}

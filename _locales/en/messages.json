@@ -1,0 +1,266 @@
+{
+  "accessDenied": {
+    "message": "Access denied."
+  },
+  "accessDeniedContactAdmin": {
+    "message": "<b>Access Denied</b> Please contact your administrator for further details."
+  },
+  "accessTokenInvalid": {
+    "message": "Session interrupted. Click Connect to continue."
+  },
+  "authCodeNotReturned": {
+    "message": "Server did not return authorization code or error message."
+  },
+  "autoFillForms": {
+    "message": "Autofill Forms"
+  },
+  "back": {
+    "message": "Back"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "changeServer": {
+    "message": "change server"
+  },
+  "changesDiscarded": {
+    "message": "Changes Discarded"
+  },
+  "checkingServerAvailability": {
+    "message": "Checking server availability..."
+  },
+  "connect": {
+    "message": "CONNECT"
+  },
+  "connecting": {
+    "message": "Connecting..."
+  },
+  "connectedTo": {
+    "message": "Connected to:"
+  },
+  "connectionLostErrorMessage": {
+    "message": "Connection lost. Click Connect to continue..."
+  },
+  "connectionLostReconnecting": {
+    "message": "Connection lost. Reconnecting..."
+  },
+  "continue": {
+    "message": "Continue"
+  },
+  "cookieSaveError": {
+    "message": "Could not save cookie."
+  },
+  "copyPassword": {
+    "message": "Copy Password"
+  },
+  "copyPasswordFailed": {
+    "message": "Copy Password Failed!"
+  },
+  "copySuccess": {
+    "message": "Copied!"
+  },
+  "copyTotpCode": {
+    "message": "Copy TOTP Code"
+  },
+  "copyTotpCodeFailed": {
+    "message": "Copy TOTP Code Failed!"
+  },
+  "copyUsername": {
+    "message": "Copy Username"
+  },
+  "copyUsernameFailed": {
+    "message": "Copy Username Failed!"
+  },
+  "couldNotSaveCredentials": {
+    "message": "Could not save credentials."
+  },
+  "credentialNotFound": {
+    "message": "No Credentials Found"
+  },
+  "defaultFolder": {
+    "message": "Default Folder"
+  },
+  "description": {
+    "message": "Description"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "enterServerUrl": {
+    "message": "Enter the server URL"
+  },
+  "error": {
+    "message": "Error"
+  },
+  "errorReturnedInAuthorization": {
+    "message": "Server returned an error during authorization request."
+  },
+  "errorReturnedInTokenRequest": {
+    "message": "Server returned an error during token request."
+  },
+  "errorRetrieveServerUrl": {
+    "message": "Could not retrieve connected server's URL."
+  },
+  "establishingConnectionSpinnerMessage": {
+    "message": "Establishing connection..."
+  },
+  "extensionDescription": {
+    "message": "Access & fill site passwords with Pleasant Password Server"
+  },
+  "extensionName": {
+    "message": "Pleasant Password Server Auto-Filler"
+  },
+  "failedToInitializePlugin": {
+    "message": "Failed to initialize plugin"
+  },
+  "failure": {
+    "message": "Failure"
+  },
+  "fill": {
+    "message": "Fill"
+  },
+  "fillPassword": {
+    "message": "Fill Password"
+  },
+  "fillUsername": {
+    "message": "Fill Username"
+  },
+  "findEntryError": {
+    "message": "An error occured saving this entry"
+  },
+  "folder": {
+    "message": "Folder"
+  },
+  "foldersNotCached": {
+    "message": "Folders haven't been cached yet."
+  },
+  "helpToConnect": {
+    "message": "Help Me To Connect"
+  },
+  "invalidServerUrl": {
+    "message": "Please enter a valid server URL."
+  },
+  "loadingSpinnerMessage": {
+    "message": "Loading..."
+  },
+  "loginVerificationError": {
+    "message": "There was an error verifying your login."
+  },
+  "neverLink": {
+    "message": "Never for this site"
+  },
+  "notes": {
+    "message": "Notes"
+  },
+  "openInNewTab": {
+    "message": "Open in New Tab"
+  },
+  "openVault": {
+    "message": "Open My Vault"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "passwords": {
+    "message": "passwords"
+  },
+  "pluginInitializing": {
+    "message": "Initializing..."
+  },
+  "promptForSite": {
+    "message": "Prompt for this site"
+  },
+  "promptTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "promptToSavePassword": {
+    "message": "Prompt To Save Passwords"
+  },
+  "refresh": {
+    "message": "Refresh"
+  },
+  "refreshActionFailed": {
+    "message": "Refresh failed"
+  },
+  "refreshApplicationFailed": {
+    "message": "Failed to refresh application state"
+  },
+  "refreshingSpinnerMessage": {
+    "message": "Refreshing..."
+  },
+  "resourceNotFound": {
+    "message": "Resource not found"
+  },
+  "retrieving": {
+    "message": "Retrieving..."
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saveAsNew": {
+    "message": "Save as new"
+  },
+  "saveEntryError": {
+    "message": "Error. Could not save entry."
+  },
+  "saveEntrySuccess": {
+    "message": "Entry Saved"
+  },
+  "savingEntrySpinnerMessage": {
+    "message": "Saving entry..."
+  },
+  "search": {
+    "message": "Search..."
+  },
+  "serverUnreachableCheckNetwork": {
+    "message": "Server Unreachable. Please check the URL your network connection and try again."
+  },
+  "sessionExpiredMessage": {
+    "message": "Your session has expired. Please sign-in again."
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "showFoldersInCredList": {
+    "message": "Show Folders in Credential Lists"
+  },
+  "signOut": {
+    "message": "Disconnect"
+  },
+  "success": {
+    "message": "Success"
+  },
+  "title": {
+    "message": "Title"
+  },
+  "totpCode": {
+    "message": "TOTP Code"
+  },
+  "totpSecret": {
+    "message": "Authenticator Key"
+  },
+  "unableToConnectToExtensionErrorMessage": {
+    "message": "Unable to connect to extension. Please try closing and reopening."
+  },
+  "unexpctedError": {
+    "message": "An unexpected error occurred"
+  },
+  "unexpectedErrorGettingToken": {
+    "message": "Unexpected error getting token."
+  },
+  "unknownErrorOccurred": {
+    "message": "<b>An unknown error occurred.</b>"
+  },
+  "update": {
+    "message": "Update"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "username": {
+    "message": "Username"
+  },
+  "usernames": {
+    "message": "usernames"
+  }
+}

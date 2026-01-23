@@ -1,0 +1,1 @@
+class RequestPromptsMessage{type=RequestPromptsMessage.type;promptId;url;tabId;constructor(t,s,e){this.promptId=t,this.url=s,this.tabId=e}}

@@ -1,0 +1,1 @@
+class CachedFoldersRequestMessage{static type="CachedFoldersRequestMessage";type=CachedFoldersRequestMessage.type}

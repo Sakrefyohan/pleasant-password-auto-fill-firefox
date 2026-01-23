@@ -1,0 +1,1 @@
+class GetSettingsRequest{static type="GetSettingsRequest";type=GetSettingsRequest.type;settingKeys;constructor(t){this.settingKeys=t}}

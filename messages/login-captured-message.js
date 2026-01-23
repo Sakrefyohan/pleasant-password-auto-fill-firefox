@@ -1,0 +1,1 @@
+class LoginCapturedMessage{static type="LoginCapturedMessage";type=LoginCapturedMessage.type;url;username;password;action;isSubmitted;isAjax;tabId;constructor(s,t,i,a=!1,e=!1,r=null){this.action="loginCaptured",this.url=s,this.username=t,this.password=i,this.isSubmitted=a,this.isAjax=e,this.tabId=r}}

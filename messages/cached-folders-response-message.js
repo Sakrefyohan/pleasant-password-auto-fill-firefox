@@ -1,0 +1,1 @@
+class CachedFoldersResponseMessage{static type="CachedFoldersResponseMessage";type=CachedFoldersResponseMessage.type;rootFolder;defaultFolderId;success;message;constructor(e,s,o,t){this.rootFolder=e,this.defaultFolderId=s,this.success=o,this.message=t}}

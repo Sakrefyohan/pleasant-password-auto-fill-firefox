@@ -1,0 +1,484 @@
+body {
+    min-width: 480px;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+}
+
+/*.three-dot-menu {
+    border: none;
+	padding: 0;
+	background: none;
+	transition: color 0.7s;
+    outline: none;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+}
+
+.three-dot-menu:hover {
+    background-color: #dedede;
+    border: none;
+    outline: none;
+}
+
+.three-dot-menu:focus {
+    background-color: #dedede;
+    border: none;
+    outline: none;
+}
+
+.three-dot-menu:after {
+    margin-left: 8px;
+    content: '\2807';
+    color: #2e2e2e;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    pointer-events: none;
+    outline: none;
+}
+
+.three-dot-menu:after:hover {
+    background-color: #dedede;
+    border: none;
+    outline: none;
+}
+
+.three-dot-menu:after:focus {
+    background-color: #dedede;
+    border: none;
+    outline: none;
+}*/
+
+/*.login-entry {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 0px;
+    margin-right: 0px;
+}*/
+
+/* .ppass-server-select {
+    margin-top: 30px;
+} */
+
+.ppass-logo-banner {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: 120px; /* Set your desired height here */
+    overflow: hidden;
+}
+
+.ppass-logo-banner img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+
+.main-menu-button {
+    margin-left: 22px;
+    margin-right: 15px;
+    font-size: 13pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Integrated search styles */
+.integrated-search-container {
+    margin: 9px 10px !important;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fcfcfc;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.search-wrapper:focus-within {
+    border-color: var(--light-blue);
+    box-shadow: 0 0 0 2px rgba(102, 175, 233, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    filter: invert(60%);
+    pointer-events: none;
+}
+
+.integrated-search-input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 12px 8px 40px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    outline: none;
+}
+
+.integrated-search-input::placeholder {
+    color: #999;
+}
+
+/* Credential Count styles */
+.credential-count-container {
+    text-align: right;
+    margin: 3px 10px 3px 0;
+}
+
+#credential-count-label {
+    color: #666;
+    font-size: 12px;
+}
+
+#credential-count {
+    color: #666;
+    font-size: 13px;
+}
+
+/* start bottom navigation bar */
+.bottom-nav-bar-hidden {
+    display: none;
+}
+
+.bottom-nav-bar-shown {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 5px 0;
+    border-top: 1px solid #e0e0e0;
+    z-index: 1000;
+}
+
+.bottom-nav-item {
+    flex: 0 0 25% !important;
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    /* Add this */
+    margin: 0;
+    padding: 0 2px;
+}
+
+.bottom-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #404040;
+    width: 100%;
+    padding: 0 5px;
+    min-height: 48px;
+    /* Add consistent height */
+}
+
+.bottom-nav-icon {
+    margin-bottom: 4px;
+    height: 24px;
+    /* Fixed height container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    /* Add this to ensure proper scaling */
+}
+
+/* Specific fix for the new icons - adjust the container not the image */
+.bottom-nav-icon img[src*="vault2.png"],
+.bottom-nav-icon img[src*="sign-out2.png"] {
+    width: 30px;
+    /* Slightly larger but contained */
+    height: 30px;
+}
+
+.bottom-nav-text {
+    font-size: 12px;
+    white-space: nowrap;
+    font-family: Roboto, sans-serif;
+}
+
+/* end bottom navigation bar */
+
+/*.login-img {
+    text-align: center;
+    height: 2rem;
+}
+
+.login-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}*/
+
+.link-image {
+    text-align: center;
+}
+
+.link-image img {
+    height: 1rem;
+    width: 1rem;
+    object-fit: contain;
+}
+
+.ppass-login-form {
+    padding: 1rem;
+}
+
+#embeddedSignIn {
+    height: 450px;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.option-menu {
+    background-color: white;
+}
+
+.main-title-box {
+    font-size: large;
+    padding: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.toolbar-btn {
+    height: 21px;
+    width: 32px;
+    background-color: white;
+    outline: none !important;
+    border-style: none;
+}
+
+.toolbar:focus {
+    outline: none !important;
+    border-style: none;
+}
+
+.toolbar-btn>img {
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+.toolbar-buttons {
+    display: inline-flex;
+    right: 0px;
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.toolbar-buttons-container {
+    width: 100%;
+    height: 31px;
+}
+
+.form-group .form-group {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+#edit-menu-container {
+    padding: 0px 22px 0px 22px;
+}
+
+.edit-buttons-container {
+    padding: 0px 22px 0px 22px;
+    margin-top: -16px;
+    margin-bottom: 22px;
+}
+
+.edit-buttons-container>.ppass-save-prompt-button-container {
+    width: unset;
+}
+
+.edit-buttons-container>.ppass-save-prompt-button-container>.ppass-save-prompt-cancel-button {
+    margin-left: 22px;
+}
+
+.edit-container {
+    height: 396px;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+}
+
+body {
+    line-height: unset;
+    font-size: unset;
+}
+
+#main-menu-content>.edit-container>#edit-menu-container>.ppass-save-prompt-form-group {
+    margin: -14px 0px 10px 0px;
+}
+
+.form-check-input {
+    margin-left: 0px;
+}
+
+#never-save-settings {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--dark-grey);
+
+    padding-bottom: 5px;
+}
+
+
+#never-save-settings>.ppass-save-prompt-toggle-container>.ppass-toggle {
+    right: -19px;
+    zoom: 0.8;
+}
+
+#never-save-settings>.ppass-save-prompt-toggle-container {
+    margin-bottom: 0px;
+    padding: 0px 22px;
+    margin-top: 17px;
+    /* position: relative;
+    height: 15px;
+    margin-top: -4px;
+    margin-bottom: 22px;
+    padding: 0px 19px; */
+}
+
+/* .ppass-save-prompt-toggle-container{
+    position: relative;
+    height: 15px;
+    margin-top: -4px;
+    margin-bottom: 22px;
+    padding: 0px 19px;
+} */
+
+.ppass-credential-list-group {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 14px;
+    padding: 6px 0px 10px 13px;
+}
+
+.settings-container {
+    padding: 22px 22px 0px 22px;
+}
+
+.form-check-label {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--dark-grey);
+}
+
+.settings-slider.ppass-toggle {
+    zoom: 0.7;
+}
+
+.toggle-label.ppass-save-prompt-toggle-label {
+    font-size: 12pt;
+}
+
+.settings-container>.form-group>.ppass-save-prompt-toggle-container {
+    padding: 0px;
+}
+
+.ppass-save-prompt-toggle-container>.settings-slider.ppass-toggle {
+    right: 0px;
+}
+
+.ppass-save-prompt-form-group[name="folder"] {
+    margin: -15px 0px 40px 0px;
+    height: 57px;
+    zoom: 0.85;
+}
+
+.ppass-save-prompt-form-group[name="serverUrl"] {
+    height: 57px;
+    margin-bottom: 32px;
+    zoom: 0.85;
+}
+
+.settings-back-button {
+    color: var(--dark-grey);
+    font-family: Roboto, sans-serif;
+}
+
+.settings-back-button-container {
+    margin: 19px 22px 0px 22px;
+}
+
+.settings-back-button:hover {
+    color: black;
+}
+
+.main-menu-logo.ppass-save-prompt-logo {
+    left: 22px;
+}
+
+ .prompt-action-button.ppass-action-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2042%20184.98%22%20style%3D%22enable-background%3Anew%200%200%2042%20184.98%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%09.st0%7Bfill%3A%235f5f5f%3B%7D%0A%3C%2Fstyle%3E%0A%3Cg%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2221%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%2292.49%22%20r%3D%2221%22%2F%3E%0A%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2221%22%20cy%3D%22163.98%22%20r%3D%2221%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+    background-size: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -13px
+    /* padding: 0px;
+    margin-left: 3px; */
+}
+
+.prompt-action-button.ppass-action-button:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    /* Match modern hover effect */
+    cursor: pointer;
+    box-shadow: none;
+    /* Remove old shadow for cleaner look */
+}
+
+.prompt-action-button.ppass-action-button[aria-expanded="true"] {
+    background-color: rgba(0, 0, 0, 0.12);
+    /* Match focus style */
+    outline: none;
+}
+
+.ppass-action-text {
+    padding-left: 10px;
+}
+
+#main-menu-buttons-container {
+    padding-bottom: 7px;
+}

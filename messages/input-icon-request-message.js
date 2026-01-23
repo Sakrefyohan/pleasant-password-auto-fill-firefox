@@ -1,0 +1,1 @@
+class InputIconRequest{static type="InputIconRequest";type=InputIconRequest.type;constructor(){}}

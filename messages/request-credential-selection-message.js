@@ -1,0 +1,1 @@
+class RequestCredentialSelectionMessage{static type="RequestCredentialSelectionMessage";type=RequestCredentialSelectionMessage.type;constructor(e,t,s,i=null){this.action=e,this.xOffset=t,this.yOffset=s,this.buttonCenterX=i}}

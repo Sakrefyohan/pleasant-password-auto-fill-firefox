@@ -1,0 +1,1 @@
+class CredentialSearchRequestMessage{static type="CredentialSearchRequestMessage";type=CredentialSearchRequestMessage.type;searchText;url;compareUrl;constructor(e,s,t){this.searchText=e,this.url=s,this.compareUrl=t}}

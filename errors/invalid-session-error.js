@@ -1,0 +1,1 @@
+class InvalidSessionError extends Error{constructor(r){super(r),this.name="InvalidSessionError"}}

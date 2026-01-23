@@ -1,0 +1,266 @@
+{
+  "accessDenied": {
+    "message": "Zugriff verweigert."
+  },
+  "accessDeniedContactAdmin": {
+    "message": "<b>Zugriff verweigert</b> Bitte kontaktieren Sie Ihren Administrator für weitere Details."
+  },
+  "accessTokenInvalid": {
+    "message": "Sitzung unterbrochen. Klicken Sie auf Verbinden, um fortzufahren."
+  },
+  "authCodeNotReturned": {
+    "message": "Der Server hat keinen Autorisierungscode oder keine Fehlermeldung zurückgegeben."
+  },
+  "autoFillForms": {
+    "message": "Formulare automatisch ausfüllen"
+  },
+  "back": {
+    "message": "Zurück"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "changeServer": {
+    "message": "Server wechseln"
+  },
+  "changesDiscarded": {
+    "message": "Änderungen verworfen"
+  },
+  "checkingServerAvailability": {
+    "message": "Überprüfe Serververfügbarkeit..."
+  },
+  "connect": {
+    "message": "VERBINDEN"
+  },
+  "connecting": {
+    "message": "Verbindung wird hergestellt..."
+  },
+  "connectedTo": {
+    "message": "Verbunden mit:"
+  },
+  "connectionLostErrorMessage": {
+    "message": "Verbindung verloren. Klicken Sie auf Verbinden, um fortzufahren..."
+  },
+  "connectionLostReconnecting": {
+    "message": "Verbindung verloren. Wiederverbindung wird hergestellt..."
+  },
+  "continue": {
+    "message": "Fortfahren"
+  },
+  "cookieSaveError": {
+    "message": "Cookie konnte nicht gespeichert werden."
+  },
+  "copyPassword": {
+    "message": "Passwort kopieren"
+  },
+  "copyPasswordFailed": {
+    "message": "Passwort kopieren fehlgeschlagen!"
+  },
+  "copySuccess": {
+    "message": "Kopiert!"
+  },
+  "copyTotpCode": {
+    "message": "TOTP-Code kopieren"
+  },
+  "copyTotpCodeFailed": {
+    "message": "TOTP-Code kopieren fehlgeschlagen!"
+  },
+  "copyUsername": {
+    "message": "Benutzername kopieren"
+  },
+  "copyUsernameFailed": {
+    "message": "Benutzername kopieren fehlgeschlagen!"
+  },
+  "couldNotSaveCredentials": {
+    "message": "Anmeldedaten konnten nicht auf dem Server gespeichert werden."
+  },
+  "credentialNotFound": {
+    "message": "Keine Anmeldedaten gefunden"
+  },
+  "defaultFolder": {
+    "message": "Standardordner"
+  },
+  "description": {
+    "message": "Beschreibung"
+  },
+  "edit": {
+    "message": "Bearbeiten"
+  },
+  "enterServerUrl": {
+    "message": "Geben Sie die Server-URL ein"
+  },
+  "error": {
+    "message": "Fehler"
+  },
+  "errorReturnedInAuthorization": {
+    "message": "Der Server hat während der Autorisierungsanfrage einen Fehler zurückgegeben."
+  },
+  "errorReturnedInTokenRequest": {
+    "message": "Der Server hat während der Token-Anfrage einen Fehler zurückgegeben."
+  },
+  "errorRetrieveServerUrl": {
+    "message": "Die URL des verbundenen Servers konnte nicht abgerufen werden."
+  },
+  "establishingConnectionSpinnerMessage": {
+    "message": "Verbindung wird hergestellt..."
+  },
+  "extensionDescription": {
+    "message": "Zugriff auf & Ausfüllen von Website-Passwörtern mit Pleasant Password Server"
+  },
+  "extensionName": {
+    "message": "Pleasant Password Server Auto-Filler"
+  },
+  "failedToInitializePlugin": {
+    "message": "Plugin konnte nicht initialisiert werden"
+  },
+  "failure": {
+    "message": "Fehler"
+  },
+  "fill": {
+    "message": "Ausfüllen"
+  },
+  "fillPassword": {
+    "message": "Passwort ausfüllen"
+  },
+  "fillUsername": {
+    "message": "Benutzername ausfüllen"
+  },
+  "findEntryError": {
+    "message": "Beim Speichern dieses Eintrags ist ein Fehler aufgetreten"
+  },
+  "folder": {
+    "message": "Ordner"
+  },
+  "foldersNotCached": {
+    "message": "Ordner wurden noch nicht zwischengespeichert."
+  },
+  "helpToConnect": {
+    "message": "Hilfe bei der Verbindung"
+  },
+  "invalidServerUrl": {
+    "message": "Bitte geben Sie eine gültige Server-URL ein."
+  },
+  "loadingSpinnerMessage": {
+    "message": "Wird geladen..."
+  },
+  "loginVerificationError": {
+    "message": "Bei der Überprüfung Ihrer Anmeldung ist ein Fehler aufgetreten."
+  },
+  "neverLink": {
+    "message": "Nie für diese Website"
+  },
+  "notes": {
+    "message": "Notizen"
+  },
+  "openInNewTab": {
+    "message": "In neuem Tab öffnen"
+  },
+  "openVault": {
+    "message": "Meinen Tresor öffnen"
+  },
+  "password": {
+    "message": "Passwort"
+  },
+  "passwords": {
+    "message": "Passwörter"
+  },
+  "pluginInitializing": {
+    "message": "Initialisierung läuft..."
+  },
+  "promptForSite": {
+    "message": "Für diese Website abfragen"
+  },
+  "promptTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "promptToSavePassword": {
+    "message": "Zum Speichern von Passwörtern auffordern"
+  },
+  "refresh": {
+    "message": "Aktualisieren"
+  },
+  "refreshActionFailed": {
+    "message": "Aktualisierung fehlgeschlagen"
+  },
+  "refreshApplicationFailed": {
+    "message": "Anwendungsstatus konnte nicht aktualisiert werden"
+  },
+  "refreshingSpinnerMessage": {
+    "message": "Aktualisiere..."
+  },
+  "resourceNotFound": {
+    "message": "Ressource nicht gefunden"
+  },
+  "retrieving": {
+    "message": "Abrufen..."
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "saveAsNew": {
+    "message": "Als neu speichern"
+  },
+  "saveEntryError": {
+    "message": "Fehler. Eintrag konnte nicht gespeichert werden."
+  },
+  "saveEntrySuccess": {
+    "message": "Eintrag gespeichert"
+  },
+  "savingEntrySpinnerMessage": {
+    "message": "Eintrag wird gespeichert..."
+  },
+  "search": {
+    "message": "Suchen..."
+  },
+  "serverUnreachableCheckNetwork": {
+    "message": "Server nicht erreichbar. Bitte überprüfen Sie die URL, Ihre Netzwerkverbindung und versuchen Sie es erneut."
+  },
+  "sessionExpiredMessage": {
+    "message": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an."
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "showFoldersInCredList": {
+    "message": "Ordner in Anmeldedatenlisten anzeigen"
+  },
+  "signOut": {
+    "message": "Trennen"
+  },
+  "success": {
+    "message": "Erfolg"
+  },
+  "title": {
+    "message": "Titel"
+  },
+  "totpCode": {
+    "message": "TOTP-Code"
+  },
+  "totpSecret": {
+    "message": "Authentifikator-Schlüssel"
+  },
+  "unableToConnectToExtensionErrorMessage": {
+    "message": "Verbindung zur Erweiterung nicht möglich. Bitte versuchen Sie, sie zu schließen und erneut zu öffnen."
+  },
+  "unexpctedError": {
+    "message": "Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "unexpectedErrorGettingToken": {
+    "message": "Unerwarteter Fehler beim Abrufen des Tokens."
+  },
+  "unknownErrorOccurred": {
+    "message": "<b>Ein unbekannter Fehler ist aufgetreten.</b>"
+  },
+  "update": {
+    "message": "Aktualisieren"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "username": {
+    "message": "Benutzername"
+  },
+  "usernames": {
+    "message": "Benutzernamen"
+  }
+}

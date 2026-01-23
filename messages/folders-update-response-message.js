@@ -1,0 +1,1 @@
+class FoldersUpdateResponseMessage{static type="FoldersUpdateResponseMessage";type=FoldersUpdateResponseMessage.type;rootFolder;defaultFolderId;success;message;constructor(e,s,t,o){this.rootFolder=e,this.defaultFolderId=s,this.success=t,this.message=o}}

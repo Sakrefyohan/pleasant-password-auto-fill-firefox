@@ -1,0 +1,1 @@
+class LoginResponseMessage{static type="LoginResponseMessage";type=LoginResponseMessage.type;success;message;constructor(s,e=""){this.success=s,this.message=e}}

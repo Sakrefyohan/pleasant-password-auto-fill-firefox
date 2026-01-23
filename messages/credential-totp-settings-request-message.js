@@ -1,0 +1,1 @@
+class CredentialTotpSettingsRequestMessage{static type="CredentialTotpSettingsRequestMessage";type=CredentialTotpSettingsRequestMessage.type;credentialId;credentialIndex;constructor(e,t){this.credentialId=e,this.credentialIndex=t}}

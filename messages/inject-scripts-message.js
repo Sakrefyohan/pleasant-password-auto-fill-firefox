@@ -1,0 +1,1 @@
+class InjectScriptsIntoTab{static type="InjectScriptsIntoTab";type=InjectScriptsIntoTab.type;data;constructor(t){this.data=t}}

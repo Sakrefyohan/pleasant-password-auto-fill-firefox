@@ -1,0 +1,266 @@
+{
+  "accessDenied": {
+    "message": "Accès refusé."
+  },
+  "accessDeniedContactAdmin": {
+    "message": "<b>Accès refusé</b> Veuillez contacter votre administrateur pour plus de détails."
+  },
+  "accessTokenInvalid": {
+    "message": "Session interrompue. Cliquez sur Connecter pour continuer."
+  },
+  "authCodeNotReturned": {
+    "message": "Le serveur n'a pas renvoyé de code d'autorisation ou de message d'erreur."
+  },
+  "autoFillForms": {
+    "message": "Remplir automatiquement les formulaires"
+  },
+  "back": {
+    "message": "Retour"
+  },
+  "cancel": {
+    "message": "Annuler"
+  },
+  "changeServer": {
+    "message": "changer de serveur"
+  },
+  "changesDiscarded": {
+    "message": "Modifications Abandonnées"
+  },
+  "checkingServerAvailability": {
+    "message": "Vérification de la disponibilité du serveur..."
+  },
+  "connect": {
+    "message": "CONNECTER"
+  },
+  "connecting": {
+    "message": "Connexion en cours..."
+  },
+  "connectedTo": {
+    "message": "Connecté à:"
+  },
+  "connectionLostErrorMessage": {
+    "message": "Connexion perdue. Cliquez sur Connecter pour continuer..."
+  },
+  "connectionLostReconnecting": {
+    "message": "Connexion perdue. Reconnexion en cours..."
+  },
+  "continue": {
+    "message": "Continuer"
+  },
+  "cookieSaveError": {
+    "message": "Impossible d'enregistrer le cookie."
+  },
+  "copyPassword": {
+    "message": "Copier le Mot de Passe"
+  },
+  "copyPasswordFailed": {
+    "message": "Échec de la copie du mot de passe !"
+  },
+  "copySuccess": {
+    "message": "Copié !"
+  },
+  "copyTotpCode": {
+    "message": "Copier le Code TOTP"
+  },
+  "copyTotpCodeFailed": {
+    "message": "Échec de la copie du code TOTP !"
+  },
+  "copyUsername": {
+    "message": "Copier le Nom d'Utilisateur"
+  },
+  "copyUsernameFailed": {
+    "message": "Échec de la copie du nom d'utilisateur !"
+  },
+  "couldNotSaveCredentials": {
+    "message": "Impossible d'enregistrer les identifiants."
+  },
+  "credentialNotFound": {
+    "message": "Aucun identifiant trouvé"
+  },
+  "defaultFolder": {
+    "message": "Dossier par défaut"
+  },
+  "description": {
+    "message": "Description"
+  },
+  "edit": {
+    "message": "Modifier"
+  },
+  "enterServerUrl": {
+    "message": "Entrez l'URL du serveur"
+  },
+  "error": {
+    "message": "Erreur"
+  },
+  "errorReturnedInAuthorization": {
+    "message": "Le serveur a renvoyé une erreur lors de la demande d'autorisation."
+  },
+  "errorReturnedInTokenRequest": {
+    "message": "Le serveur a renvoyé une erreur lors de la demande de jeton."
+  },
+  "errorRetrieveServerUrl": {
+    "message": "Impossible de récupérer l'URL du serveur connecté."
+  },
+  "establishingConnectionSpinnerMessage": {
+    "message": "Établissement de la connexion..."
+  },
+  "extensionDescription": {
+    "message": "Accédez et remplissez les mots de passe des sites Web avec Pleasant Password Server"
+  },
+  "extensionName": {
+    "message": "Pleasant Password Server Auto-Filler"
+  },
+  "failedToInitializePlugin": {
+    "message": "Échec de l'initialisation du plugin"
+  },
+  "failure": {
+    "message": "Échec"
+  },
+  "fill": {
+    "message": "Remplir"
+  },
+  "fillPassword": {
+    "message": "Remplir le Mot de Passe"
+  },
+  "fillUsername": {
+    "message": "Remplir le Nom d'Utilisateur"
+  },
+  "findEntryError": {
+    "message": "Une erreur s'est produite lors de l'enregistrement de cette entrée"
+  },
+  "folder": {
+    "message": "Dossier"
+  },
+  "foldersNotCached": {
+    "message": "Les dossiers n'ont pas encore été mis en cache."
+  },
+  "helpToConnect": {
+    "message": "Aidez-Moi à Me Connecter"
+  },
+  "invalidServerUrl": {
+    "message": "Veuillez entrer une URL de serveur valide."
+  },
+  "loadingSpinnerMessage": {
+    "message": "Chargement..."
+  },
+  "loginVerificationError": {
+    "message": "Une erreur s'est produite lors de la vérification de votre connexion."
+  },
+  "neverLink": {
+    "message": "Jamais pour ce site"
+  },
+  "notes": {
+    "message": "Notes"
+  },
+  "openInNewTab": {
+    "message": "Ouvrir dans un nouvel onglet"
+  },
+  "openVault": {
+    "message": "Ouvrir Mon Coffre-fort"
+  },
+  "password": {
+    "message": "Mot de Passe"
+  },
+  "passwords": {
+    "message": "mots de passe"
+  },
+  "pluginInitializing": {
+    "message": "Initialisation en cours..."
+  },
+  "promptForSite": {
+    "message": "Demander pour ce site"
+  },
+  "promptTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "promptToSavePassword": {
+    "message": "Demander Pour Enregistrer les Mots de Passe"
+  },
+  "refresh": {
+    "message": "Actualiser"
+  },
+  "refreshActionFailed": {
+    "message": "Échec de l'actualisation"
+  },
+  "refreshApplicationFailed": {
+    "message": "Impossible d'actualiser l'état de l'application"
+  },
+  "refreshingSpinnerMessage": {
+    "message": "Actualisation..."
+  },
+  "resourceNotFound": {
+    "message": "Ressource non trouvée"
+  },
+  "retrieving": {
+    "message": "Récupération..."
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "saveAsNew": {
+    "message": "Enregistrer comme nouveau"
+  },
+  "saveEntryError": {
+    "message": "Erreur. Impossible d'enregistrer l'entrée."
+  },
+  "saveEntrySuccess": {
+    "message": "Entrée Enregistrée"
+  },
+  "savingEntrySpinnerMessage": {
+    "message": "Enregistrement de l'entrée..."
+  },
+  "search": {
+    "message": "Rechercher..."
+  },
+  "serverUnreachableCheckNetwork": {
+    "message": "Serveur inaccessible. Veuillez vérifier l'URL, votre connexion réseau et réessayer."
+  },
+  "sessionExpiredMessage": {
+    "message": "Votre session a expiré. Veuillez vous reconnecter."
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "showFoldersInCredList": {
+    "message": "Afficher les dossiers dans les listes d'identifiants"
+  },
+  "signOut": {
+    "message": "Déconnecter"
+  },
+  "success": {
+    "message": "Succès"
+  },
+  "title": {
+    "message": "Titre"
+  },
+  "totpCode": {
+    "message": "Code TOTP"
+  },
+  "totpSecret": {
+    "message": "Clé d'authentificateur"
+  },
+  "unableToConnectToExtensionErrorMessage": {
+    "message": "Impossible de se connecter à l'extension. Veuillez essayer de la fermer et de la rouvrir."
+  },
+  "unexpctedError": {
+    "message": "Une erreur inattendue s'est produite"
+  },
+  "unexpectedErrorGettingToken": {
+    "message": "Erreur inattendue lors de l'obtention du jeton."
+  },
+  "unknownErrorOccurred": {
+    "message": "<b>Une erreur inconnue s'est produite.</b>"
+  },
+  "update": {
+    "message": "Mettre à jour"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "username": {
+    "message": "Nom d'Utilisateur"
+  },
+  "usernames": {
+    "message": "noms d'utilisateur"
+  }
+}

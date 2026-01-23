@@ -1,0 +1,1 @@
+class ServerLoginAuthUrlRequest{static type="ServerLoginAuthUrlRequest";type=ServerLoginAuthUrlRequest.type;server;constructor(e){this.server=e}}

@@ -1,0 +1,1 @@
+class DefaultLoginResponse{static type="DefaultLoginResponse";type=DefaultLoginResponse.type;data;constructor(t){this.data=t}}

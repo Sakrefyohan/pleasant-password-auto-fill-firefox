@@ -1,0 +1,1 @@
+class CredentialPasswordResponse{static type="CredentialPasswordResponse";type=CredentialPasswordResponse.type;password;credentialIndex;constructor(s,e){this.password=s,this.credentialIndex=e}}

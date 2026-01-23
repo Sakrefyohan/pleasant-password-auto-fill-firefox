@@ -1,0 +1,1 @@
+class BlacklistSiteMessage{static type="BlacklistSiteMessage";type=BlacklistSiteMessage.type;url;blackList;constructor(s,t){this.url=s,this.blackList=t}}

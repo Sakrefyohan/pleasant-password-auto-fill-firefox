@@ -1,0 +1,266 @@
+{
+  "accessDenied": {
+    "message": "Toegang Geweigerd."
+  },
+  "accessDeniedContactAdmin": {
+    "message": "<b>Toegang Geweigerd</b> Neem contact op met uw beheerder voor meer informatie."
+  },
+  "accessTokenInvalid": {
+    "message": "Sessie onderbroken. Klik op Verbind om door te gaan."
+  },
+  "authCodeNotReturned": {
+    "message": "De server heeft geen autorisatiecode of foutmelding teruggestuurd."
+  },
+  "autoFillForms": {
+    "message": "Autovul formulieren"
+  },
+  "back": {
+    "message": "Terug"
+  },
+  "cancel": {
+    "message": "Annuleren"
+  },
+  "changeServer": {
+    "message": "server wijzigen"
+  },
+  "changesDiscarded": {
+    "message": "Veranderingen Weggegooid"
+  },
+  "checkingServerAvailability": {
+    "message": "Serverbeschikbaarheid controleren..."
+  },
+  "connect": {
+    "message": "VERBIND"
+  },
+  "connecting": {
+    "message": "Verbinding maken..."
+  },
+  "connectedTo": {
+    "message": "Verbonden met:"
+  },
+  "connectionLostErrorMessage": {
+    "message": "Verbinding verbroken. Klik op Verbind om door te gaan..."
+  },
+  "connectionLostReconnecting": {
+    "message": "Verbinding verbroken. Opnieuw verbinding maken..."
+  },
+  "continue": {
+    "message": "Ga Verder"
+  },
+  "cookieSaveError": {
+    "message": "Kon cookie niet opslaan."
+  },
+  "copyPassword": {
+    "message": "Kopieer Wachtwoord"
+  },
+  "copyPasswordFailed": {
+    "message": "Wachtwoord kopiëren mislukt!"
+  },
+  "copySuccess": {
+    "message": "Gekopieerd!"
+  },
+  "copyTotpCode": {
+    "message": "Kopieer TOTP-Code"
+  },
+  "copyTotpCodeFailed": {
+    "message": "TOTP-Code kopiëren mislukt!"
+  },
+  "copyUsername": {
+    "message": "Kopieer Gebruikersnaam"
+  },
+  "copyUsernameFailed": {
+    "message": "Gebruikersnaam kopiëren mislukt!"
+  },
+  "couldNotSaveCredentials": {
+    "message": "Kon inloggegevens niet opslaan op de server."
+  },
+  "credentialNotFound": {
+    "message": "Geen inloggegevens gevonden"
+  },
+  "defaultFolder": {
+    "message": "Standaard Map"
+  },
+  "description": {
+    "message": "Beschrijving"
+  },
+  "edit": {
+    "message": "Bewerk"
+  },
+  "enterServerUrl": {
+    "message": "Voer de server URL in"
+  },
+  "error": {
+    "message": "Fout"
+  },
+  "errorReturnedInAuthorization": {
+    "message": "De server gaf een foutmelding tijdens het autorisatieverzoek."
+  },
+  "errorReturnedInTokenRequest": {
+    "message": "Server gaf een fout terug tijdens token aanvraag."
+  },
+  "errorRetrieveServerUrl": {
+    "message": "Kon de URL van de verbonden server niet ophalen."
+  },
+  "establishingConnectionSpinnerMessage": {
+    "message": "Verbinding tot stand brengen..."
+  },
+  "extensionDescription": {
+    "message": "Toegang tot & invullen van website-wachtwoorden met Pleasant Password Server"
+  },
+  "extensionName": {
+    "message": "Pleasant Password Server Auto-Filler"
+  },
+  "failedToInitializePlugin": {
+    "message": "Kon plugin niet initialiseren"
+  },
+  "failure": {
+    "message": "Mislukking"
+  },
+  "fill": {
+    "message": "Vul"
+  },
+  "fillPassword": {
+    "message": "Wachtwoord Vullen"
+  },
+  "fillUsername": {
+    "message": "Gebruikersnaam Vullen"
+  },
+  "findEntryError": {
+    "message": "Er is een fout opgetreden bij het opslaan van dit item"
+  },
+  "folder": {
+    "message": "Map"
+  },
+  "foldersNotCached": {
+    "message": "Mappen zijn nog niet in de cache geplaatst."
+  },
+  "helpToConnect": {
+    "message": "Help met verbinden"
+  },
+  "invalidServerUrl": {
+    "message": "Voer een geldige server URL in."
+  },
+  "loadingSpinnerMessage": {
+    "message": "Laden..."
+  },
+  "loginVerificationError": {
+    "message": "Er is een fout opgetreden bij het verifiëren van uw aanmelding."
+  },
+  "neverLink": {
+    "message": "Nooit voor deze website"
+  },
+  "notes": {
+    "message": "Opmerkingen"
+  },
+  "openInNewTab": {
+    "message": "Openen in nieuw tabblad"
+  },
+  "openVault": {
+    "message": "Open Mijn Kluis"
+  },
+  "password": {
+    "message": "Wachtwoord"
+  },
+  "passwords": {
+    "message": "wachtwoorden"
+  },
+  "pluginInitializing": {
+    "message": "Initialiseren..."
+  },
+  "promptForSite": {
+    "message": "Vragen voor deze website"
+  },
+  "promptTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "promptToSavePassword": {
+    "message": "Vraag Om Wachtwoorden Op Te Slaan"
+  },
+  "refresh": {
+    "message": "Vernieuwen"
+  },
+  "refreshActionFailed": {
+    "message": "Vernieuwen mislukt"
+  },
+  "refreshApplicationFailed": {
+    "message": "Kon applicatiestatus niet vernieuwen"
+  },
+  "refreshingSpinnerMessage": {
+    "message": "Vernieuwen..."
+  },
+  "resourceNotFound": {
+    "message": "Bron niet gevonden"
+  },
+  "retrieving": {
+    "message": "Ophalen..."
+  },
+  "save": {
+    "message": "Opslaan"
+  },
+  "saveAsNew": {
+    "message": "Opslaan als nieuw"
+  },
+  "saveEntryError": {
+    "message": "Fout. Kon invoer niet opslaan."
+  },
+  "saveEntrySuccess": {
+    "message": "Invoer opgeslagen"
+  },
+  "savingEntrySpinnerMessage": {
+    "message": "Item opslaan..."
+  },
+  "search": {
+    "message": "Zoeken..."
+  },
+  "serverUnreachableCheckNetwork": {
+    "message": "Server onbereikbaar. Controleer de URL, uw netwerkverbinding en probeer het opnieuw."
+  },
+  "sessionExpiredMessage": {
+    "message": "Uw sessie is verlopen. Log opnieuw in."
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "showFoldersInCredList": {
+    "message": "Toon Mappen in Lijsten Met Referenties"
+  },
+  "signOut": {
+    "message": "Verbreken"
+  },
+  "success": {
+    "message": "Succes"
+  },
+  "title": {
+    "message": "Titel"
+  },
+  "totpCode": {
+    "message": "TOTP-Code"
+  },
+  "totpSecret": {
+    "message": "Authenticator-sleutel"
+  },
+  "unableToConnectToExtensionErrorMessage": {
+    "message": "Kan geen verbinding maken met de extensie. Probeer deze te sluiten en opnieuw te openen."
+  },
+  "unexpctedError": {
+    "message": "Er is een onverwachte fout opgetreden"
+  },
+  "unexpectedErrorGettingToken": {
+    "message": "Onverwachte fout bij het verkrijgen van token."
+  },
+  "unknownErrorOccurred": {
+    "message": "<b>Er is een onbekende fout opgetreden.</b>"
+  },
+  "update": {
+    "message": "Update"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "username": {
+    "message": "Gebruikersnaam"
+  },
+  "usernames": {
+    "message": "gebruikersnamen"
+  }
+}

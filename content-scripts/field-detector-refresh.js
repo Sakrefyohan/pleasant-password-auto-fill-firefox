@@ -1,0 +1,1 @@
+jQuery(document).ready((function(){return new Promise((e=>setTimeout(e,750))).then((e=>{fieldDetector.refreshInputFields()}))}));

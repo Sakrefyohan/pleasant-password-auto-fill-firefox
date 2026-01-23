@@ -1,0 +1,1 @@
+class Validate{constructor(){}validatePasswordField(e){return"input"===e.localName&&this.fakeCheck(e)}validateUsernameField(e){return"input"===e.localName&&this.fakeCheck(e)}fakeCheck(){return!0}}

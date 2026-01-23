@@ -1,0 +1,1 @@
+class UpdateSettingsRequest{static type="UpdateSettingsRequest";type=UpdateSettingsRequest.type;settingMappings;constructor(t){this.settingMappings=t}}

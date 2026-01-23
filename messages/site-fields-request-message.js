@@ -1,0 +1,1 @@
+class SiteFieldsRequestMessage{static type="SiteFieldsRequestMessage";type=SiteFieldsRequestMessage.type;constructor(){}}

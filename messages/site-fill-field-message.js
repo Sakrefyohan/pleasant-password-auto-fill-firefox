@@ -1,0 +1,1 @@
+class SiteFillFieldMessage{static type="SiteFillFieldMessage";type=SiteFillFieldMessage.type;fields;constructor(e){this.fields=e}}

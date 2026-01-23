@@ -1,0 +1,1 @@
+class LogoutResponse{static type="LogoutResponse";type=LogoutResponse.type;success;message;constructor(s,e){this.success=s,this.message=e}}

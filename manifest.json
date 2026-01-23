@@ -1,0 +1,149 @@
+{
+  "name": "__MSG_extensionName__",
+  "version": "1.0.33",
+  "description": "__MSG_extensionDescription__",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pleasant-password-autofiller@local.dev",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "authenticationInfo",
+          "websiteActivity"
+        ],
+        "optional": []
+      }
+    }
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "identity",
+    "activeTab",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background-scripts/browser-polyfill.js",
+      "crypto.js",
+      "data/field-data.js",
+      "data/save-prompt-data.js",
+      "data/ppass/password-entry.js",
+      "data/domain-blacklist.js",
+      "data/credential-data.js",
+      "data/ppass/folder-data.js",
+      "data/ppass/totp-settings.js",
+      "background-scripts/async-semaphore.js",
+      "messages/default-login-request.js",
+      "messages/login-data-message.js",
+      "messages/login-data-request-message.js",
+      "messages/login-message.js",
+      "messages/login-response-message.js",
+      "messages/server-login-auth-url-request.js",
+      "messages/server-login-auth-url-response.js",
+      "messages/server-login-token-request.js",
+      "messages/server-login-token-response.js",
+      "messages/login-status-request.js",
+      "messages/login-status-response.js",
+      "messages/logout-request.js",
+      "messages/logout-response.js",
+      "messages/site-fields-message.js",
+      "messages/site-fields-request-message.js",
+      "messages/site-fill-field-message.js",
+      "messages/site-fill-field-response-message.js",
+      "messages/login-captured-message.js",
+      "messages/save-prompt-message.js",
+      "messages/request-prompts-message.js",
+      "messages/save-prompt-response-message.js",
+      "messages/cached-folders-request-message.js",
+      "messages/cached-folders-response-message.js",
+      "messages/folders-update-response-message.js",
+      "messages/folders-update-request-message.js",
+      "messages/show-credential-selection-message.js",
+      "messages/request-credential-selection-message.js",
+      "messages/credentials-request-message.js",
+      "messages/credential-search-request-message.js",
+      "messages/never-save-message.js",
+      "messages/iframe-change-request.js",
+      "messages/iframe-change-response.js",
+      "messages/credentials-response-message.js",
+      "messages/get-settings-request.js",
+      "messages/get-settings-response.js",
+      "messages/update-settings-request.js",
+      "messages/credential-fill-request.js",
+      "messages/credential-password-request.js",
+      "messages/credential-password-response.js",
+      "messages/ppass-entry-request-message.js",
+      "messages/ppass-entry-response-message.js",
+      "messages/save-password-entry-message.js",
+      "messages/save-password-entry-response-message.js",
+      "messages/scale-factor-message.js",
+      "messages/edit-prompt-message.js",
+      "messages/input-icon-request-message.js",
+      "messages/credential-totp-settings-request-message.js",
+      "messages/credential-totp-settings-response-message.js",
+      "messages/site-blacklist-message.js",
+      "messages/blacklist-site-message.js",
+      "messages/get-admin-settings-message.js",
+      "messages/get-admin-settings-response-message.js",
+      "messages/inject-scripts-message.js",
+      "errors/invalid-session-error.js",
+      "background-scripts/login-service.js",
+      "background-scripts/message-service.js",
+      "background-scripts/password-service.js",
+      "background-scripts/settings-service.js",
+      "background-scripts/api-service.js",
+      "background-scripts/service-manager.js",
+      "background-scripts/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "views/popup.htm",
+    "default_icon": {
+      "16": "images/ppass-icon-grey-16_solid.png",
+      "32": "images/ppass-icon-grey-32.png",
+      "48": "images/ppass-icon-grey-48.png",
+      "128": "images/ppass-icon-grey-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/ppass-transparent-icon-16.png",
+    "32": "images/ppass-transparent-icon-32.png",
+    "48": "images/ppass-transparent-icon-48.png",
+    "128": "images/ppass-transparent-icon-128.png"
+  },
+  "web_accessible_resources": [
+    "jquery.js",
+    "images/*",
+    "styles/*",
+    "views/*",
+    "styles/fonts/*",
+    "bootstrap-4.5.2-dist/*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "styles/ppass-page-styles.css"
+      ],
+      "js": [
+        "content-scripts/browser-polyfill.js",
+        "jquery.js",
+        "messages/iframe-change-response.js",
+        "messages/login-captured-message.js",
+        "messages/get-settings-request.js",
+        "messages/inject-scripts-message.js",
+        "messages/credential-password-request.js",
+        "content-scripts/validate.js",
+        "content-scripts/prompt-manager.js",
+        "content-scripts/injector.js"
+      ]
+    }
+  ]
+}

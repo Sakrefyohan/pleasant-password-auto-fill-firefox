@@ -1,0 +1,1 @@
+class LoginData{username;password;url;img;constructor(s,r,a,i){this.username=s,this.password=r,this.url=a,this.img=i}}

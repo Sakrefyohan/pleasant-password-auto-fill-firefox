@@ -1,0 +1,1 @@
+class ServerLoginTokenResponse{static type="ServerLoginTokenResponse";type=ServerLoginTokenResponse.type;success;message;constructor(e,s){this.success=e,this.message=s}}

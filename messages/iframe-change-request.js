@@ -1,0 +1,1 @@
+class IframeChangeRequest{static type="IframeChangeRequest";type=IframeChangeRequest.type;height;promptType;constructor(e,t){this.height=e,this.promptType=t}}

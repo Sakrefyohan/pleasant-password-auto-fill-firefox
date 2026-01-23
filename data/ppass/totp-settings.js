@@ -1,0 +1,1 @@
+class TotpSettings{totpIssuer;totpSecret;totpDigits;totpPeriod;constructor(t,s,o,i){this.totpIssuer=t,this.totpSecret=s,this.totpDigits=o,this.totpPeriod=i}}

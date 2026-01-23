@@ -1,0 +1,1 @@
+class PassEntryResponseMessage{static type="PassEntryResponseMessage";type=PassEntryResponseMessage.type;passEntry;rootFolder;success;constructor(s,e){this.passEntry=s,this.success=e}}

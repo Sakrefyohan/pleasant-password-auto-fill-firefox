@@ -1,0 +1,1 @@
+class SavePasswordEntryMessage{static type="SavePasswordEntryMessage";type=SavePasswordEntryMessage.type;passEntry;constructor(s){this.passEntry=s}}

@@ -1,0 +1,1 @@
+class IFrameChangeResponse{static type="IFrameChangeResponse";type=IFrameChangeResponse.type;height;promptType;constructor(e,t){this.height=e,this.promptType=t}}

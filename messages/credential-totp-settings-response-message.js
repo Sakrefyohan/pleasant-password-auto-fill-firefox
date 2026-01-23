@@ -1,0 +1,1 @@
+class CredentialTotpSettingsResponseMessage{static type="CredentialTotpSettingsResponseMessage";type=CredentialTotpSettingsResponseMessage.type;totpSettings;credentialIndex;constructor(e,t){this.totpSettings=e,this.credentialIndex=t}}

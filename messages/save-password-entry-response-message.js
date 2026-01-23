@@ -1,0 +1,1 @@
+class SavePasswordEntryResponseMessage{static type="SavePasswordEntryResponseMessage";type=SavePasswordEntryResponseMessage.type;success;constructor(s){this.success=s}}

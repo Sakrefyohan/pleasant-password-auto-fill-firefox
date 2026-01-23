@@ -1,0 +1,1 @@
+class LoginStatusRequest{static type="LoginStatusRequest";type=LoginStatusRequest.type;constructor(){}}

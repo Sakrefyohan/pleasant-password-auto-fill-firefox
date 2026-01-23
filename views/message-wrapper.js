@@ -1,0 +1,1 @@
+async function sendMessageAsync(e,s){return new Promise(((n,a)=>{browserAPI.runtime.sendMessage(e,(e=>{let a=s(e);a&&a instanceof Promise?new Promise((async(e,s)=>{await a,e(),n()})):n()}))}))}function sendMessage(e,s){browserAPI.runtime.sendMessage(e,s)}

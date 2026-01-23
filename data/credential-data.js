@@ -1,0 +1,1 @@
+class CredentialData{id;username;title;constructor(t,e,s){this.username=t,this.title=e}}

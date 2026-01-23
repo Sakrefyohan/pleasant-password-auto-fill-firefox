@@ -1,0 +1,266 @@
+{
+  "accessDenied": {
+    "message": "Acceso denegado."
+  },
+  "accessDeniedContactAdmin": {
+    "message": "<b>Acceso denegado</b> Por favor, contacte con su administrador para más detalles."
+  },
+  "accessTokenInvalid": {
+    "message": "Sesión interrumpida. Haga clic en Conectar para continuar."
+  },
+  "authCodeNotReturned": {
+    "message": "El servidor no devolvió código de autorización o mensaje de error."
+  },
+  "autoFillForms": {
+    "message": "Autocompletar Formularios"
+  },
+  "back": {
+    "message": "Atrás"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "changeServer": {
+    "message": "cambiar servidor"
+  },
+  "changesDiscarded": {
+    "message": "Cambios Descartados"
+  },
+  "checkingServerAvailability": {
+    "message": "Verificando disponibilidad del servidor..."
+  },
+  "connect": {
+    "message": "CONECTAR"
+  },
+  "connecting": {
+    "message": "Conectando..."
+  },
+  "connectedTo": {
+    "message": "Conectado a:"
+  },
+  "connectionLostErrorMessage": {
+    "message": "Conexión perdida. Haga clic en Conectar para continuar..."
+  },
+  "connectionLostReconnecting": {
+    "message": "Conexión perdida. Reconectando..."
+  },
+  "continue": {
+    "message": "Continuar"
+  },
+  "cookieSaveError": {
+    "message": "No se pudo guardar la cookie."
+  },
+  "copyPassword": {
+    "message": "Copiar Contraseña"
+  },
+  "copyPasswordFailed": {
+    "message": "¡Error al copiar la contraseña!"
+  },
+  "copySuccess": {
+    "message": "¡Copiado!"
+  },
+  "copyTotpCode": {
+    "message": "Copiar Código TOTP"
+  },
+  "copyTotpCodeFailed": {
+    "message": "¡Error al copiar el código TOTP!"
+  },
+  "copyUsername": {
+    "message": "Copiar Nombre de Usuario"
+  },
+  "copyUsernameFailed": {
+    "message": "¡Error al copiar el nombre de usuario!"
+  },
+  "couldNotSaveCredentials": {
+    "message": "No se pudieron guardar las credenciales en el servidor."
+  },
+  "credentialNotFound": {
+    "message": "No se encontraron credenciales"
+  },
+  "defaultFolder": {
+    "message": "Carpeta Predeterminada"
+  },
+  "description": {
+    "message": "Descripción"
+  },
+  "edit": {
+    "message": "Editar"
+  },
+  "enterServerUrl": {
+    "message": "Introduzca la URL del servidor"
+  },
+  "error": {
+    "message": "Error"
+  },
+  "errorReturnedInAuthorization": {
+    "message": "El servidor devolvió un error durante la solicitud de autorización."
+  },
+  "errorReturnedInTokenRequest": {
+    "message": "El servidor devolvió un error durante la solicitud de token."
+  },
+  "errorRetrieveServerUrl": {
+    "message": "No se pudo recuperar la URL del servidor conectado."
+  },
+  "establishingConnectionSpinnerMessage": {
+    "message": "Estableciendo conexión..."
+  },
+  "extensionDescription": {
+    "message": "Acceda y complete contraseñas de sitios web con Pleasant Password Server"
+  },
+  "extensionName": {
+    "message": "Pleasant Password Server Auto-Filler"
+  },
+  "failedToInitializePlugin": {
+    "message": "Error al inicializar el complemento"
+  },
+  "failure": {
+    "message": "Fallo"
+  },
+  "fill": {
+    "message": "Rellenar"
+  },
+  "fillPassword": {
+    "message": "Rellenar Contraseña"
+  },
+  "fillUsername": {
+    "message": "Rellenar Nombre de Usuario"
+  },
+  "findEntryError": {
+    "message": "Ocurrió un error al guardar esta entrada"
+  },
+  "folder": {
+    "message": "Carpeta"
+  },
+  "foldersNotCached": {
+    "message": "Las carpetas aún no se han almacenado en caché."
+  },
+  "helpToConnect": {
+    "message": "Ayúdame a Conectar"
+  },
+  "invalidServerUrl": {
+    "message": "Por favor, introduzca una URL de servidor válida."
+  },
+  "loadingSpinnerMessage": {
+    "message": "Cargando..."
+  },
+  "loginVerificationError": {
+    "message": "Hubo un error al verificar su inicio de sesión."
+  },
+  "neverLink": {
+    "message": "Nunca para este sitio"
+  },
+  "notes": {
+    "message": "Notas"
+  },
+  "openInNewTab": {
+    "message": "Abrir en nueva pestaña"
+  },
+  "openVault": {
+    "message": "Abrir Mi Bóveda"
+  },
+  "password": {
+    "message": "Contraseña"
+  },
+  "passwords": {
+    "message": "contraseñas"
+  },
+  "pluginInitializing": {
+    "message": "Inicializando..."
+  },
+  "promptForSite": {
+    "message": "Preguntar para este sitio"
+  },
+  "promptTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "promptToSavePassword": {
+    "message": "Preguntar Para Guardar Contraseñas"
+  },
+  "refresh": {
+    "message": "Actualizar"
+  },
+  "refreshActionFailed": {
+    "message": "Error al actualizar"
+  },
+  "refreshApplicationFailed": {
+    "message": "Error al actualizar el estado de la aplicación"
+  },
+  "refreshingSpinnerMessage": {
+    "message": "Actualizando..."
+  },
+  "resourceNotFound": {
+    "message": "Recurso no encontrado"
+  },
+  "retrieving": {
+    "message": "Recuperando..."
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "saveAsNew": {
+    "message": "Guardar como nuevo"
+  },
+  "saveEntryError": {
+    "message": "Error. No se pudo guardar la entrada."
+  },
+  "saveEntrySuccess": {
+    "message": "Entrada Guardada"
+  },
+  "savingEntrySpinnerMessage": {
+    "message": "Guardando entrada..."
+  },
+  "search": {
+    "message": "Buscar..."
+  },
+  "serverUnreachableCheckNetwork": {
+    "message": "El servidor es inalcanzable. Por favor, verifique la URL, su conexión de red e inténtelo de nuevo."
+  },
+  "sessionExpiredMessage": {
+    "message": "Su sesión ha expirado. Por favor, inicie sesión de nuevo."
+  },
+  "settings": {
+    "message": "Configuración"
+  },
+  "showFoldersInCredList": {
+    "message": "Mostrar carpetas en listas de credenciales"
+  },
+  "signOut": {
+    "message": "Desconectar"
+  },
+  "success": {
+    "message": "Éxito"
+  },
+  "title": {
+    "message": "Título"
+  },
+  "totpCode": {
+    "message": "Código TOTP"
+  },
+  "totpSecret": {
+    "message": "Clave de autenticador"
+  },
+  "unableToConnectToExtensionErrorMessage": {
+    "message": "No se puede conectar con la extensión. Por favor, intente cerrarla y volver a abrirla."
+  },
+  "unexpctedError": {
+    "message": "Ocurrió un error inesperado"
+  },
+  "unexpectedErrorGettingToken": {
+    "message": "Error inesperado al obtener el token."
+  },
+  "unknownErrorOccurred": {
+    "message": "<b>Ocurrió un error desconocido.</b>"
+  },
+  "update": {
+    "message": "Actualizar"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "username": {
+    "message": "Nombre de Usuario"
+  },
+  "usernames": {
+    "message": "nombres de usuario"
+  }
+}

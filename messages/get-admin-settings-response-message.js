@@ -1,0 +1,1 @@
+class GetAdminSettingsResponseMessage{static type="GetAdminSettingsResponseMessage";type=GetAdminSettingsResponseMessage.type;ChromeExtension;AutoFill;PasswordCapture;ChooseFolder;PasswordUse;constructor(s,e,t,o,i){this.ChromeExtension=s,this.AutoFill=e,this.PasswordCapture=t,this.ChooseFolder=o,this.PasswordUse=i}}

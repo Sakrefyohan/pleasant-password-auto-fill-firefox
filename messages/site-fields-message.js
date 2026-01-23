@@ -1,0 +1,1 @@
+class SiteFieldsMessage{static type="SiteFieldsMessage";type=SiteFieldsMessage.type;loginData;tabId;tabUrl;constructor(t,s,e){this.loginData=t,this.tabId=s,this.tabUrl=e}}

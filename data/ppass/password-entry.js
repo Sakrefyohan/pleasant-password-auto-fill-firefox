@@ -1,0 +1,1 @@
+class PasswordEntry{id;folderId;title;username;password;url;notes;totpIssuer;totpSecret;totpDigits;totpPeriod;tags;expires;newPass;fullUrl;constructor(){}}

@@ -1,0 +1,1 @@
+class EditPromptMessage{static type="EditPromptMessage";type=EditPromptMessage.type;id;passEntry;constructor(t){this.id=t}}

@@ -1,0 +1,1 @@
+class LoginDataRequestMessage{static type="LoginDataRequestMessage";type=LoginDataRequestMessage.type;usernameFields;passwordFields;constructor(s,e){this.usernameFields=s,this.passwordFields=e}}

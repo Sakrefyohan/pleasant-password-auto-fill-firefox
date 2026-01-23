@@ -1,0 +1,1 @@
+class PPassEntryRequestMessage{static type="PPassEntryRequestMessage";type=PPassEntryRequestMessage.type;id;constructor(s){this.id=s}}

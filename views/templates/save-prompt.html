@@ -1,0 +1,35 @@
+<div id="loading-overlay" class="loading-overlay" style="display:none;">
+    <div class="loading-overlay-spinner-container">
+        <img src="../images/sync_grey_rev.png" class="loading-overlay-spinner overlay-rotating" alt="Loading">
+        <div class="loading-text" data-i18n="initializing"></div>
+    </div>
+</div>
+<div class="ppass-save-prompt-title">
+    <img class="ppass-save-prompt-logo" src="/images/ppass-transparent-icon-48.png">
+    <div data-innerHTML="promptTitle" class="ppass-save-prompt-title-text"></div>
+</div>
+<div class="ppass-save-prompt" data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'>
+    <div class="ppass-save-prompt-response-container"
+        data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'></div>
+    <div class="ppass-save-prompt-entry-info-grid" data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'>
+        <div data-innerHTML="entryTitle" class="entry-title ppass-sub-text-1 ppass-grey"></div>
+        <div data-innerHTML="entryUsername" class="entry-username ppass-sub-text-1 ppass-red"></div>
+        <div class="entry-more">
+            <button class="ppass-save-prompt-more-button ppass-action-button"
+                data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]' name="more""></button>
+        </div>
+    </div>
+    <div class=" ppass-save-prompt-options-container"
+                data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'>
+        </div>
+        <div class="ppass-divider-light-wide"></div>
+        <div class="ppass-save-prompt-button-container">
+            <button class="ppass-prompt-button ppass-save-prompt-save-button"
+                data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]' name="save">__MSG_save__</button>
+            <button class="ppass-prompt-button ppass-save-prompt-cancel-button"
+                data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'
+                name="cancel">__MSG_cancel__</button>
+            <button class="ppass-prompt-button ppass-save-prompt-never-link"
+                data-template-bind='[{"attribute": "prompt-id", "value": "saveId"}]'>__MSG_neverLink__</button>
+        </div>
+    </div>
