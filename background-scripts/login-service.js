@@ -185,55 +185,72 @@ class LoginService {
         return new Promise((resolve, reject) => {
             let authTabId = null;
             let resolved = false;
-            
+            let pollIntervalId = null;
+            let timeoutId = null;
+            const redirectBase = this.appUrl.replace(/\/+$/, "");
+
             const cleanup = () => {
-                if (authTabId) {
-                    browserAPI.tabs.remove(authTabId).catch(() => {});
+                if (pollIntervalId) {
+                    clearInterval(pollIntervalId);
+                    pollIntervalId = null;
+                }
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                    timeoutId = null;
                 }
                 browserAPI.tabs.onUpdated.removeListener(onTabUpdated);
                 browserAPI.tabs.onRemoved.removeListener(onTabRemoved);
+                if (authTabId) {
+                    browserAPI.tabs.remove(authTabId).catch(() => {});
+                    authTabId = null;
+                }
             };
-            
-            const onTabUpdated = (tabId, changeInfo, tab) => {
-                if (tabId !== authTabId || !changeInfo.url) return;
-                
-                const url = changeInfo.url;
-                Logger.debug("Auth tab URL changed:", url);
-                
-                // Check if URL starts with our Chrome redirect URL
-                if (url.startsWith(this.appUrl)) {
+
+            const tryResolveWithUrl = (url) => {
+                if (resolved || !url || typeof url !== "string") return;
+                Logger.debug("Auth tab candidate URL:", url);
+                if (url.startsWith(redirectBase)) {
                     resolved = true;
                     cleanup();
                     resolve(url);
+                    return;
                 }
-                
-                // Also check for error in URL (server might redirect with error)
                 if (url.includes("error=")) {
                     resolved = true;
                     cleanup();
-                    // Still resolve with the URL so error handling can occur
                     resolve(url);
                 }
             };
-            
+
+            const onTabUpdated = (tabId, changeInfo, tab) => {
+                if (tabId !== authTabId) return;
+                const url = changeInfo.url || (tab && tab.url) || null;
+                if (url) tryResolveWithUrl(url);
+            };
+
             const onTabRemoved = (tabId) => {
                 if (tabId === authTabId && !resolved) {
                     cleanup();
                     reject(new Error("Authentication cancelled by user"));
                 }
             };
-            
-            // Add listeners
+
             browserAPI.tabs.onUpdated.addListener(onTabUpdated);
             browserAPI.tabs.onRemoved.addListener(onTabRemoved);
-            
-            // Open the auth tab
+
             browserAPI.tabs.create({ url: authUrl }).then(tab => {
                 authTabId = tab.id;
                 Logger.debug("Opened auth tab with ID:", authTabId);
-                
-                // Timeout after 5 minutes
-                setTimeout(() => {
+                if (tab && tab.url) tryResolveWithUrl(tab.url);
+
+                pollIntervalId = setInterval(() => {
+                    if (resolved || !authTabId) return;
+                    browserAPI.tabs.get(authTabId).then(t => {
+                        if (t && t.url) tryResolveWithUrl(t.url);
+                    }).catch(() => {});
+                }, 400);
+
+                timeoutId = setTimeout(() => {
                     if (!resolved) {
                         cleanup();
                         reject(new Error("Authentication timeout"));

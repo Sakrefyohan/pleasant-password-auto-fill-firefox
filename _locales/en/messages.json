@@ -29,6 +29,9 @@
   "checkingServerAvailability": {
     "message": "Checking server availability..."
   },
+  "commandCloseSidebarDescription": {
+    "message": "Close Pleasant sidebar"
+  },
   "connect": {
     "message": "CONNECT"
   },
@@ -152,11 +155,20 @@
   "notes": {
     "message": "Notes"
   },
+  "oauthAlreadyInProgress": {
+    "message": "A sign-in is already in progress. Finish or close that tab first."
+  },
+  "oauthTabOpenedHint": {
+    "message": "A tab opens for server sign-in. You can close this panel while you sign in; when finished, open the extension again — you will be connected. If you keep this panel open, it will switch automatically when done."
+  },
   "openInNewTab": {
     "message": "Open in New Tab"
   },
   "openVault": {
     "message": "Open My Vault"
+  },
+  "openSidebarMenu": {
+    "message": "Open sidebar panel (stays open during sign-in)"
   },
   "password": {
     "message": "Password"
@@ -206,6 +218,9 @@
   "saveEntrySuccess": {
     "message": "Entry Saved"
   },
+  "saveSuppressedHostsButton": {
+    "message": "Save host list"
+  },
   "savingEntrySpinnerMessage": {
     "message": "Saving entry..."
   },
@@ -221,11 +236,32 @@
   "settings": {
     "message": "Settings"
   },
+  "settingsAddHostLine": {
+    "message": "Add a line"
+  },
   "showFoldersInCredList": {
     "message": "Show Folders in Credential Lists"
   },
+  "sidebarTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "sidebarIdleMessage": {
+    "message": "You are signed in. Click the Pleasant toolbar icon to open the popup — that usually closes this sidebar. You can also use the button below, or assign a shortcut in about:addons → Extensions → … → Manage Extension Shortcuts (Close Pleasant sidebar)."
+  },
+  "sidebarCloseButton": {
+    "message": "Close sidebar"
+  },
   "signOut": {
     "message": "Disconnect"
+  },
+  "suppressedAutomationHostsHelp": {
+    "message": "One hostname per line. The list saves automatically after a short pause while typing, or when you press Save — important because the popup closes when you click outside it. On these hosts, heavy page scripts and the in-page \"save new password\" banner are skipped; you can still copy credentials from the popup. On other sites, if \"Prompt to save password\" is on (admin allows), the extension can offer to store new logins after you sign in."
+  },
+  "suppressedAutomationHostsIntro": {
+    "message": "Domains or IPs where field scanning, autofill injection, and save prompts are skipped — useful on slow dashboards or self-hosted apps."
+  },
+  "suppressedAutomationHostsLabel": {
+    "message": "Disable page automation on these hosts"
   },
   "success": {
     "message": "Success"

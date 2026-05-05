@@ -29,6 +29,9 @@
   "checkingServerAvailability": {
     "message": "Vérification de la disponibilité du serveur..."
   },
+  "commandCloseSidebarDescription": {
+    "message": "Fermer la barre latérale Pleasant"
+  },
   "connect": {
     "message": "CONNECTER"
   },
@@ -152,11 +155,20 @@
   "notes": {
     "message": "Notes"
   },
+  "oauthAlreadyInProgress": {
+    "message": "Une connexion est déjà en cours. Terminez ou fermez cet onglet d'abord."
+  },
+  "oauthTabOpenedHint": {
+    "message": "Un onglet s'ouvre pour vous authentifier auprès du serveur. Vous pouvez fermer ce panneau pendant la connexion ; une fois terminé, rouvrez l'extension : vous serez connecté. Si vous laissez ce panneau ouvert, il passera tout seul à l'écran principal."
+  },
   "openInNewTab": {
     "message": "Ouvrir dans un nouvel onglet"
   },
   "openVault": {
     "message": "Ouvrir Mon Coffre-fort"
+  },
+  "openSidebarMenu": {
+    "message": "Ouvrir le panneau latéral (connexion — reste visible pendant OAuth)"
   },
   "password": {
     "message": "Mot de Passe"
@@ -206,6 +218,9 @@
   "saveEntrySuccess": {
     "message": "Entrée Enregistrée"
   },
+  "saveSuppressedHostsButton": {
+    "message": "Enregistrer la liste d'hôtes"
+  },
   "savingEntrySpinnerMessage": {
     "message": "Enregistrement de l'entrée..."
   },
@@ -221,11 +236,32 @@
   "settings": {
     "message": "Paramètres"
   },
+  "settingsAddHostLine": {
+    "message": "Ajouter une ligne"
+  },
   "showFoldersInCredList": {
     "message": "Afficher les dossiers dans les listes d'identifiants"
   },
+  "sidebarTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "sidebarIdleMessage": {
+    "message": "Vous êtes connecté. Cliquez l’icône Pleasant dans la barre d’outils pour ouvrir le popup — la barre latérale se ferme en principe en même temps. Sinon utilisez le bouton ci‑dessous, ou un raccourci (about:addons → Modules complémentaires → … → Gérer les raccourcis : Fermer la barre latérale Pleasant)."
+  },
+  "sidebarCloseButton": {
+    "message": "Fermer la barre latérale"
+  },
   "signOut": {
     "message": "Déconnecter"
+  },
+  "suppressedAutomationHostsHelp": {
+    "message": "Un nom d'hôte par ligne. La liste s'enregistre automatiquement après une courte pause pendant la saisie, ou dès que vous appuyez sur Enregistrer — important car le popup se ferme si vous cliquez en dehors. Sur ces hôtes, les scripts lourds et la bannière « enregistrer un nouveau mot de passe » sur la page sont désactivés ; le popup reste utilisable pour copier des identifiants. Sur les autres sites, si « Proposer d'enregistrer le mot de passe » est activé (autorisé par l'administrateur), l'extension peut proposer d'enregistrer un nouvel identifiant après connexion."
+  },
+  "suppressedAutomationHostsIntro": {
+    "message": "Domaines ou adresses IP où la détection des champs, l'injection d'autofill et les invites d'enregistrement sont ignorées — pratique pour les tableaux de bord lents ou les applis auto-hébergées."
+  },
+  "suppressedAutomationHostsLabel": {
+    "message": "Désactiver l'automatisation sur ces hôtes"
   },
   "success": {
     "message": "Succès"

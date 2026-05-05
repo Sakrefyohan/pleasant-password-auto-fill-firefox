@@ -228,9 +228,9 @@ class BackgroundService {
 
 const backgroundService = new BackgroundService();
 
-backgroundService.initialize().then(() => {
+backgroundService.initialize().then(async () => {
     console.log("Background service initialized, starting main...");
-    backgroundService.main();
+    await backgroundService.main();
 }).catch(e => {
     console.error("Failed to initialize background service:", e);
 });

@@ -29,6 +29,9 @@
   "checkingServerAvailability": {
     "message": "Verificando disponibilidad del servidor..."
   },
+  "commandCloseSidebarDescription": {
+    "message": "Cerrar barra lateral Pleasant"
+  },
   "connect": {
     "message": "CONECTAR"
   },
@@ -152,11 +155,20 @@
   "notes": {
     "message": "Notas"
   },
+  "oauthAlreadyInProgress": {
+    "message": "Ya hay un inicio de sesión en curso. Termine o cierre esa pestaña primero."
+  },
+  "oauthTabOpenedHint": {
+    "message": "Se abre una pestaña para iniciar sesión en el servidor. Puede cerrar este panel; al terminar, vuelva a abrir la extensión y estará conectado. Si deja el panel abierto, cambiará solo al terminar."
+  },
   "openInNewTab": {
     "message": "Abrir en nueva pestaña"
   },
   "openVault": {
     "message": "Abrir Mi Bóveda"
+  },
+  "openSidebarMenu": {
+    "message": "Abrir panel lateral (permanece visible al iniciar sesión)"
   },
   "password": {
     "message": "Contraseña"
@@ -206,6 +218,9 @@
   "saveEntrySuccess": {
     "message": "Entrada Guardada"
   },
+  "saveSuppressedHostsButton": {
+    "message": "Guardar lista de hosts"
+  },
   "savingEntrySpinnerMessage": {
     "message": "Guardando entrada..."
   },
@@ -221,11 +236,32 @@
   "settings": {
     "message": "Configuración"
   },
+  "settingsAddHostLine": {
+    "message": "Añadir línea"
+  },
   "showFoldersInCredList": {
     "message": "Mostrar carpetas en listas de credenciales"
   },
+  "sidebarTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "sidebarIdleMessage": {
+    "message": "Ha iniciado sesión. Pulse el icono Pleasant en la barra de herramientas para abrir el popup — suele cerrar esta barra lateral. También puede usar el botón de abajo o un atajo (about:addons → Extensiones → … → Administrar atajos: Cerrar barra lateral Pleasant)."
+  },
+  "sidebarCloseButton": {
+    "message": "Cerrar barra lateral"
+  },
   "signOut": {
     "message": "Desconectar"
+  },
+  "suppressedAutomationHostsHelp": {
+    "message": "Un nombre de host por línea. La lista se guarda sola tras una breve pausa al escribir, o al pulsar Guardar — importante porque el popup se cierra al hacer clic fuera. En estos hosts no se inyectan scripts pesados ni el aviso en página para guardar contraseñas nuevas; el popup sigue sirviendo para copiar credenciales. En otros sitios, si « Preguntar para guardar contraseña » está activo (según el administrador), la extensión puede ofrecer guardar nuevos accesos tras iniciar sesión."
+  },
+  "suppressedAutomationHostsIntro": {
+    "message": "Dominios o IPs donde se omiten la detección de campos, la inyección de autocompletado y los avisos de guardado — útil en paneles lentos o aplicaciones autoalojadas."
+  },
+  "suppressedAutomationHostsLabel": {
+    "message": "Desactivar automatización en estos hosts"
   },
   "success": {
     "message": "Éxito"
