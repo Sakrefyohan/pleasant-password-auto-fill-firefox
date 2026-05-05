@@ -117,4 +117,28 @@ class SettingsService {
             this.domainBlacklist.removeDomain(t);
         }
     }
+
+    /**
+     * Pages where heavy content scripts (field-detector, capture, etc.) must not run.
+     * Includes domain blacklist (never save) plus optional host list in storage.
+     */
+    async isAutomationSuppressedForUrl(url) {
+        if (!url) return false;
+        if (this.isDomainBlacklisted(url)) return true;
+        try {
+            const hosts = await this.getSetting("suppressedAutomationHosts");
+            if (!Array.isArray(hosts) || hosts.length === 0) return false;
+            const hostname = new URL(url).hostname.toLowerCase();
+            for (const h of hosts) {
+                if (!h || typeof h !== "string") continue;
+                const pat = h.trim().toLowerCase();
+                if (!pat) continue;
+                if (hostname === pat) return true;
+                if (hostname.endsWith("." + pat)) return true;
+            }
+        } catch (e) {
+            console.warn("isAutomationSuppressedForUrl:", e);
+        }
+        return false;
+    }
 }

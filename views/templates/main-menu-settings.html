@@ -1,8 +1,9 @@
-<div>
+<div class="settings-root">
     <div class="settings-back-button-container">
         <a href="#" id="settings-back-button" class="settings-back-button" name="cancel">⯇ __MSG_back__</a>
     </div>
     <div class="ppass-divider-light-wide"></div>
+    <div class="settings-body-scroll">
     <div class="settings-container">
         <div class="ppass-save-prompt-form-group" name="folder">
             <select id="settings-defaultPasswordFolder" class="ppass-save-prompt-select-list">
@@ -14,28 +15,45 @@
             <input disabled data-value="serverUrl" id="serverUrl" class="ppass-save-prompt-input" type="" placeholder="__MSG_connectedTo__">
             <label class="ppass-save-prompt-label ppass-sub-text-1 ppass-grey">__MSG_connectedTo__</label>
         </div>
-        <div class="form-group">
-            <div class="ppass-save-prompt-toggle-container">
-                <label class="toggle-label ppass-save-prompt-toggle-label">__MSG_autoFillForms__</label>
-                <label class="settings-slider ppass-toggle">
-                    <input id="settings-autofill" class="" type="checkbox">
-                    <span class="ppass-slider"></span>
-                </label>
+        <section class="settings-block settings-block--toggles" aria-label="__MSG_settings__">
+            <div class="form-group settings-toggles-group">
+                <div class="ppass-save-prompt-toggle-container settings-toggle-row">
+                    <span class="toggle-label ppass-save-prompt-toggle-label" id="lbl-settings-autofill">__MSG_autoFillForms__</span>
+                    <label class="settings-slider ppass-toggle" aria-labelledby="lbl-settings-autofill">
+                        <input id="settings-autofill" class="" type="checkbox">
+                        <span class="ppass-slider"></span>
+                    </label>
+                </div>
+                <div class="ppass-save-prompt-toggle-container settings-toggle-row">
+                    <span class="toggle-label ppass-save-prompt-toggle-label" id="lbl-settings-capture">__MSG_promptToSavePassword__</span>
+                    <label class="settings-slider ppass-toggle" aria-labelledby="lbl-settings-capture">
+                        <input id="settings-capture" class="" type="checkbox">
+                        <span class="ppass-slider"></span>
+                    </label>
+                </div>
+                <div class="ppass-save-prompt-toggle-container settings-toggle-row">
+                    <span class="toggle-label ppass-save-prompt-toggle-label" id="lbl-settings-folders">__MSG_showFoldersInCredList__</span>
+                    <label class="settings-slider ppass-toggle" aria-labelledby="lbl-settings-folders">
+                        <input id="settings-show-credential-folders" class="" type="checkbox">
+                        <span class="ppass-slider"></span>
+                    </label>
+                </div>
             </div>
-            <div class="ppass-save-prompt-toggle-container">
-                <label class="toggle-label ppass-save-prompt-toggle-label">__MSG_promptToSavePassword__</label>
-                <label class="settings-slider ppass-toggle">
-                    <input id="settings-capture" class="" type="checkbox">
-                    <span class="ppass-slider"></span>
-                </label>
+        </section>
+        <section class="settings-block settings-block--hosts" aria-labelledby="settings-hosts-heading">
+            <div class="settings-hosts-card">
+                <h2 id="settings-hosts-heading" class="settings-section-heading">__MSG_suppressedAutomationHostsLabel__</h2>
+                <p class="settings-hosts-intro">__MSG_suppressedAutomationHostsIntro__</p>
+                <div class="settings-hosts-toolbar" role="group" aria-label="__MSG_suppressedAutomationHostsLabel__">
+                    <button type="button" id="settings-add-host-line" class="btn settings-hosts-toolbar-btn">__MSG_settingsAddHostLine__</button>
+                </div>
+                <div class="settings-hosts-scroll" tabindex="0">
+                    <textarea id="settings-suppressed-hosts" class="ppass-save-prompt-input settings-hosts-textarea" rows="6" spellcheck="false" aria-describedby="settings-hosts-help" placeholder="homeassistant.local&#10;192.168.1.10"></textarea>
+                </div>
+                <button type="button" id="settings-save-suppressed-hosts" class="btn settings-save-hosts-btn">__MSG_saveSuppressedHostsButton__</button>
+                <p id="settings-hosts-help" class="settings-hosts-help">__MSG_suppressedAutomationHostsHelp__</p>
             </div>
-            <div class="ppass-save-prompt-toggle-container">
-                <label class="toggle-label ppass-save-prompt-toggle-label">__MSG_showFoldersInCredList__</label>
-                <label class="settings-slider ppass-toggle">
-                    <input id="settings-show-credential-folders" class="" type="checkbox">
-                    <span class="ppass-slider"></span>
-                </label>
-            </div>
-        </div>
+        </section>
+    </div>
     </div>
 </div>

@@ -29,6 +29,9 @@
   "checkingServerAvailability": {
     "message": "Serverbeschikbaarheid controleren..."
   },
+  "commandCloseSidebarDescription": {
+    "message": "Pleasant-zijbalk sluiten"
+  },
   "connect": {
     "message": "VERBIND"
   },
@@ -152,11 +155,20 @@
   "notes": {
     "message": "Opmerkingen"
   },
+  "oauthAlreadyInProgress": {
+    "message": "Er is al een aanmelding bezig. Rond die af of sluit dat tabblad."
+  },
+  "oauthTabOpenedHint": {
+    "message": "Er opent een tabblad om aan te melden bij de server. U kunt dit paneel sluiten; open daarna de extensie opnieuw — u bent dan ingelogd. Laat u het paneel open, dan schakelt het vanzelf als het klaar is."
+  },
   "openInNewTab": {
     "message": "Openen in nieuw tabblad"
   },
   "openVault": {
     "message": "Open Mijn Kluis"
+  },
+  "openSidebarMenu": {
+    "message": "Zijpaneel openen (blijft zichtbaar tijdens aanmelden)"
   },
   "password": {
     "message": "Wachtwoord"
@@ -206,6 +218,9 @@
   "saveEntrySuccess": {
     "message": "Invoer opgeslagen"
   },
+  "saveSuppressedHostsButton": {
+    "message": "Hostlijst opslaan"
+  },
   "savingEntrySpinnerMessage": {
     "message": "Item opslaan..."
   },
@@ -221,11 +236,32 @@
   "settings": {
     "message": "Instellingen"
   },
+  "settingsAddHostLine": {
+    "message": "Regel toevoegen"
+  },
   "showFoldersInCredList": {
     "message": "Toon Mappen in Lijsten Met Referenties"
   },
+  "sidebarTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "sidebarIdleMessage": {
+    "message": "U bent aangemeld. Klik op het Pleasant-pictogram op de werkbalk om de popup te openen — de zijbalk sluit daarbij meestal. U kunt ook de knop hieronder gebruiken of een sneltoets (about:addons → Extensies → … → Sneltoetsen beheren: Pleasant-zijbalk sluiten)."
+  },
+  "sidebarCloseButton": {
+    "message": "Zijbalk sluiten"
+  },
   "signOut": {
     "message": "Verbreken"
+  },
+  "suppressedAutomationHostsHelp": {
+    "message": "Eén hostnaam per regel. De lijst wordt na een korte typ-pauze automatisch opgeslagen, of direct via Hostlijst opslaan — belangrijk omdat de popup sluit bij klikken buiten de popup. Op deze hosts geen zware scripts en geen paginabanner om nieuwe wachtwoorden op te slaan; kopiëren via de popup blijft mogelijk. Op andere sites kan de extensie nieuwe logins aanbieden als « Vragen om wachtwoord op te slaan » aan staat (indien door beheerder toegestaan)."
+  },
+  "suppressedAutomationHostsIntro": {
+    "message": "Domeinen of IP-adressen waar veldherkenning, autofill-injectie en opslagprompts worden overgeslagen — handig bij trage dashboards of selfhosted apps."
+  },
+  "suppressedAutomationHostsLabel": {
+    "message": "Pagina-automatisering uitschakelen op deze hosts"
   },
   "success": {
     "message": "Succes"

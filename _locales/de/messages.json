@@ -29,6 +29,9 @@
   "checkingServerAvailability": {
     "message": "Überprüfe Serververfügbarkeit..."
   },
+  "commandCloseSidebarDescription": {
+    "message": "Pleasant-Seitenleiste schließen"
+  },
   "connect": {
     "message": "VERBINDEN"
   },
@@ -152,11 +155,20 @@
   "notes": {
     "message": "Notizen"
   },
+  "oauthAlreadyInProgress": {
+    "message": "Eine Anmeldung läuft bereits. Beenden oder schließen Sie zuerst diesen Tab."
+  },
+  "oauthTabOpenedHint": {
+    "message": "Ein Tab öffnet sich für die Anmeldung. Sie können dieses Fenster schließen; öffnen Sie die Erweiterung danach erneut — Sie sind dann angemeldet. Bleibt das Fenster offen, wechselt es automatisch."
+  },
   "openInNewTab": {
     "message": "In neuem Tab öffnen"
   },
   "openVault": {
     "message": "Meinen Tresor öffnen"
+  },
+  "openSidebarMenu": {
+    "message": "Seitenleiste öffnen (bleibt bei der Anmeldung sichtbar)"
   },
   "password": {
     "message": "Passwort"
@@ -206,6 +218,9 @@
   "saveEntrySuccess": {
     "message": "Eintrag gespeichert"
   },
+  "saveSuppressedHostsButton": {
+    "message": "Hostliste speichern"
+  },
   "savingEntrySpinnerMessage": {
     "message": "Eintrag wird gespeichert..."
   },
@@ -221,11 +236,32 @@
   "settings": {
     "message": "Einstellungen"
   },
+  "settingsAddHostLine": {
+    "message": "Zeile hinzufügen"
+  },
   "showFoldersInCredList": {
     "message": "Ordner in Anmeldedatenlisten anzeigen"
   },
+  "sidebarTitle": {
+    "message": "Pleasant Auto-Fill"
+  },
+  "sidebarIdleMessage": {
+    "message": "Sie sind angemeldet. Klicken Sie auf das Pleasant-Symbol in der Symbolleiste, um das Popup zu öffnen — die Seitenleiste schließt sich dabei in der Regel. Alternativ die Schaltfläche unten oder eine Tastenkombination (about:addons → Erweiterungen → … → Tastenkombinationen verwalten: Pleasant-Seitenleiste schließen)."
+  },
+  "sidebarCloseButton": {
+    "message": "Seitenleiste schließen"
+  },
   "signOut": {
     "message": "Trennen"
+  },
+  "suppressedAutomationHostsHelp": {
+    "message": "Ein Hostname pro Zeile. Die Liste wird nach kurzer Eingabepause automatisch gespeichert oder sofort über „Hostliste speichern“ — wichtig, weil sich das Popup schließt, wenn Sie außerhalb klicken. Auf diesen Hosts entfallen schwere Skripte und die Seitenleiste zum Speichern neuer Passwörter; Kopieren aus dem Popup bleibt möglich. Auf anderen Hosts kann die Erweiterung neue Zugangsdaten anbieten, wenn „Passwort speichern vorschlagen“ aktiv ist (Admin erlaubt)."
+  },
+  "suppressedAutomationHostsIntro": {
+    "message": "Domains oder IPs, auf denen Felderkennung, Autofill-Injektion und Speicherdialoge übersprungen werden — sinnvoll bei langsamen Dashboards oder Self-Hosting."
+  },
+  "suppressedAutomationHostsLabel": {
+    "message": "Seiten-Automatisierung auf diesen Hosts deaktivieren"
   },
   "success": {
     "message": "Erfolg"

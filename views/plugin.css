@@ -3,6 +3,48 @@ body {
     overflow: hidden;
 }
 
+/*
+ * Popup navigateur : ne pas utiliser 100vh ni flex:1 sur la colonne — dans le document
+ * du browserAction, vh peut être ~0 et la colonne s’effondre (bandeau bleu 1 px).
+ */
+html.ppass-html-popup {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+body.ppass-body-popup {
+    margin: 0;
+    width: 480px !important;
+    min-width: 480px !important;
+    max-width: 480px !important;
+    min-height: 557px;
+    height: auto;
+    max-height: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Réglages : plus de hauteur utile ; le scroll se fait sur html si le contenu dépasse */
+body.ppass-body-popup.ppass-body--settings {
+    min-height: 640px;
+}
+
+#ppass-main-column.ppass-main-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 512px;
+    width: 100%;
+}
+
+body.ppass-body-popup.ppass-body--settings #ppass-main-column.ppass-main-column {
+    min-height: 580px;
+}
+
 input {
     width: 100%;
 }
@@ -481,4 +523,228 @@ body {
 
 #main-menu-buttons-container {
     padding-bottom: 7px;
+}
+
+/* Réglages : scroll + lignes interrupteurs (override ppass-styles : height 15px / float) */
+#ppass-settings {
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.settings-root {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.settings-body-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* En réglages la barre du bas est masquée : marge basse modérée pour fin de liste */
+#ppass-settings .settings-body-scroll {
+    padding-bottom: 28px;
+    box-sizing: border-box;
+}
+
+.settings-container .settings-toggles-group {
+    margin: 0 0 8px;
+    padding: 0 0 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.settings-container .settings-toggle-row.ppass-save-prompt-toggle-container {
+    position: relative !important;
+    height: auto !important;
+    min-height: 44px;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding: 6px 0 !important;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.settings-container .settings-toggle-row .toggle-label.ppass-save-prompt-toggle-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 13px !important;
+    line-height: 1.35;
+    margin: 0;
+    padding-right: 4px;
+}
+
+.settings-container .settings-toggle-row > .settings-slider.ppass-toggle {
+    float: none !important;
+    right: auto !important;
+    position: relative !important;
+    flex: 0 0 auto;
+    align-self: center;
+    zoom: 0.85;
+}
+
+.settings-block--hosts {
+    margin-top: 18px;
+    padding: 0 0 20px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Carte « hôtes exclus » — lisible, marge basse nette (évite effet coupé) */
+.settings-hosts-card {
+    background: #fafbfc;
+    border: 1px solid #e2e6ea;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    padding: 14px 14px 16px;
+    margin: 0 0 8px;
+}
+
+.settings-hosts-card .settings-section-heading {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.settings-hosts-intro {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.settings-hosts-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.settings-hosts-toolbar-btn {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1a4d6e;
+    background: #fff;
+    border: 1px solid #c5d4df;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.settings-hosts-toolbar-btn:hover {
+    background: #f0f6fa;
+    border-color: #9bb8cc;
+}
+
+/* Zone liste : scroll visible (Firefox) */
+.settings-hosts-scroll {
+    max-height: 192px;
+    min-height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #cfd8dc;
+    background: #fff;
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+}
+
+.settings-hosts-scroll:focus-within {
+    outline: 2px solid rgba(13, 90, 138, 0.25);
+    outline-offset: 1px;
+}
+
+.settings-hosts-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.settings-hosts-scroll::-webkit-scrollbar-thumb {
+    background: #c5cbd3;
+    border-radius: 4px;
+}
+
+.settings-hosts-scroll::-webkit-scrollbar-thumb:hover {
+    background: #a8b0bc;
+}
+
+.settings-hosts-scroll .settings-hosts-textarea {
+    border: none !important;
+    max-height: none;
+    min-height: 132px !important;
+    border-radius: 0;
+}
+
+.settings-save-hosts-btn {
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--venice-blue, #0d5a8a);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.settings-save-hosts-btn:hover {
+    filter: brightness(1.05);
+}
+
+.settings-section-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark-grey, #333);
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.settings-hosts-textarea {
+    width: 100%;
+    resize: vertical;
+    font-family: Consolas, "Roboto Mono", monospace;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    box-sizing: border-box;
+    /* .ppass-save-prompt-input impose height:56px — inutilisable pour un textarea */
+    height: auto !important;
+    min-height: 112px !important;
+    max-height: 220px;
+    padding: 10px 12px !important;
+    display: block;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto !important;
+    -moz-user-select: text;
+    user-select: text;
+    overflow-y: auto;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.settings-hosts-help {
+    font-family: Roboto, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #5a5a5a;
+    margin: 0;
+    padding-top: 4px;
+    border-top: 1px solid #e8ecf0;
 }
